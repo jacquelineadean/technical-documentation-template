@@ -1,0 +1,105 @@
+name: Documentation quality
+
+on:
+  pull_request:
+    paths:
+      - "**/*.md"
+      - "tools/**"
+      - ".github/workflows/docs-quality.yml"
+  push:
+    branches: [main]
+  schedule:
+    # Weekly staleness sweep, Mondays 07:00 UTC.
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate documents
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate front matter, links, and diagrams
+        run: python3 tools/validate_docs.py .
+
+      - name: Check the catalog is current
+        run: python3 tools/build_catalog.py . --check
+
+  staleness:
+    name: Staleness report
+    runs-on: ubuntu-latest
+    # Informational: a stale document is a signal to its owner, not a reason to
+    # block an unrelated pull request.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Report documents past their review date
+        run: |
+          python3 tools/validate_docs.py . --stale-report | tee staleness.txt
+          {
+            echo "## Documentation review status"
+            echo
+            echo '```'
+            cat staleness.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  changed-docs:
+    name: Documentation obligations
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Show downstream impact of changed documents
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          changed=$(git diff --name-only "$BASE_SHA" "$HEAD_SHA" -- '*.md' || true)
+          if [ -z "$changed" ]; then
+            echo "No markdown changed." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          {
+            echo "## Downstream impact of changed documents"
+            echo
+            echo "Documents declaring a dependency on what this PR changes. Confirm each"
+            echo "is either updated here or genuinely unaffected."
+            echo
+          } >> "$GITHUB_STEP_SUMMARY"
+          for file in $changed; do
+            [ -f "$file" ] || continue
+            doc_id=$(sed -n 's/^doc_id:[[:space:]]*//p' "$file" | head -1)
+            case "$doc_id" in
+              ""|*"<"*) continue ;;
+            esac
+            {
+              echo "<details><summary><code>$doc_id</code> — $file</summary>"
+              echo
+              echo '```'
+              python3 tools/validate_docs.py . --impact "$doc_id"
+              echo '```'
+              echo
+              echo "</details>"
+            } >> "$GITHUB_STEP_SUMMARY"
+          done

@@ -108,7 +108,7 @@ And enforced by reviewers:
 - **One accountable owner**, expressed as a role (e.g. "Order Management Product Owner"),
   not a person's name and not a team.
 - **Confidence levels on legacy assertions** — see
-  [`01-documentation-standards.md`](01-documentation-standards.md#confidence-levels).
+  [`01-documentation-standards.md`](01-documentation-standards.md#3-confidence-levels).
 - **No screenshots as the sole source of truth.**
 
 ## Anti-patterns this repository deliberately blocks
