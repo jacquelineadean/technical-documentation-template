@@ -218,6 +218,9 @@ class Document:
     doc_id: str | None = None
     upstream: list[str] = field(default_factory=list)
     downstream: list[str] = field(default_factory=list)
+    # False for documents loaded only to resolve cross-references, when the caller
+    # asked to validate one file or one subtree.
+    in_scope: bool = True
 
 
 # --------------------------------------------------------------------------------------
@@ -243,6 +246,20 @@ def parse_iso_date(value: str) -> date | None:
         return datetime.strptime(value, "%Y-%m-%d").date()
     except ValueError:
         return None
+
+
+def find_repo_root(target: Path) -> Path:
+    """Walk up from the target to the repository root.
+
+    The corpus is always loaded from the root so that doc-ID uniqueness and the
+    dependency graph resolve, even when the caller validates a single file.
+    Falls back to the target itself (or its parent) outside a repository.
+    """
+    start = target if target.is_dir() else target.parent
+    for candidate in [start, *start.parents]:
+        if (candidate / ".git").exists() or (candidate / "templates").is_dir():
+            return candidate
+    return start
 
 
 def slugify(heading: str) -> str:
@@ -612,22 +629,27 @@ class Validator:
     # -- corpus-level -------------------------------------------------------------
 
     def check_corpus(self) -> None:
+        by_path = {d.rel: d for d in self.documents}
         seen: dict[str, list[str]] = defaultdict(list)
         for doc in self.documents:
             if doc.doc_id:
                 seen[doc.doc_id].append(doc.rel)
         for doc_id, paths in sorted(seen.items()):
             if len(paths) > 1:
+                # Report the clash on every in-scope file involved in it.
                 for path in paths:
-                    self.add(path, "FM-04", "error",
-                             f"duplicate doc_id '{doc_id}' also used by "
-                             f"{', '.join(p for p in paths if p != path)}")
+                    if by_path[path].in_scope:
+                        self.add(path, "FM-04", "error",
+                                 f"duplicate doc_id '{doc_id}' also used by "
+                                 f"{', '.join(p for p in paths if p != path)}")
             else:
-                self.by_id[doc_id] = next(d for d in self.documents if d.rel == paths[0])
+                self.by_id[doc_id] = by_path[paths[0]]
 
+        # Cross-references resolve against the whole corpus, not just the target,
+        # so validating one file does not report its neighbours as unknown.
         known = set(self.by_id)
         for doc in self.documents:
-            if doc.relaxed:
+            if doc.relaxed or not doc.in_scope:
                 continue
             for field_name in GRAPH_FIELDS:
                 for ref in as_list(doc.front_matter.get(field_name)):
@@ -641,13 +663,19 @@ class Validator:
     # -- entry point --------------------------------------------------------------
 
     def run(self, target: Path) -> None:
-        for path in self.discover(target):
+        # Always load the whole repository so that doc-ID uniqueness and the
+        # upstream/downstream graph resolve correctly, then report findings only for
+        # the requested target. Without this, validating one file reports every
+        # document it references as unknown.
+        for path in self.discover(self.root):
             self.load(path)
         for doc in self.documents:
-            self.check_front_matter(doc)
-            self.check_staleness(doc)
-            self.check_links(doc)
-            self.check_markdown(doc)
+            doc.in_scope = doc.path == target or target in doc.path.parents
+            if doc.in_scope:
+                self.check_front_matter(doc)
+                self.check_staleness(doc)
+                self.check_links(doc)
+                self.check_markdown(doc)
         self.check_corpus()
 
     # -- reports ------------------------------------------------------------------
@@ -656,7 +684,7 @@ class Validator:
         rows = []
         for doc in self.documents:
             fm = doc.front_matter
-            if doc.relaxed or fm.get("status") != "approved":
+            if doc.relaxed or not doc.in_scope or fm.get("status") != "approved":
                 continue
             if fm.get("review_cycle") == "on-change":
                 continue
@@ -739,8 +767,7 @@ def main(argv: list[str] | None = None) -> int:
             return 2
         today = parsed
 
-    root = target if target.is_dir() else target.parent
-    validator = Validator(root=root, today=today)
+    validator = Validator(root=find_repo_root(target), today=today)
     validator.run(target)
 
     if args.impact:
@@ -782,10 +809,13 @@ def main(argv: list[str] | None = None) -> int:
 
     errors = [f for f in validator.findings if f.severity == "error"]
     warnings = [f for f in validator.findings if f.severity == "warning"]
+    checked = sum(1 for d in validator.documents if d.in_scope)
+    context = len(validator.documents) - checked
 
     if args.format == "json":
         print(json.dumps({
-            "documents_checked": len(validator.documents),
+            "documents_checked": checked,
+            "documents_loaded_for_context": context,
             "errors": len(errors),
             "warnings": len(warnings),
             "findings": [f.to_dict() for f in validator.findings],
@@ -794,7 +824,9 @@ def main(argv: list[str] | None = None) -> int:
         for finding in sorted(validator.findings, key=lambda f: (f.path, f.line or 0)):
             print(finding.render())
         print()
-        print(f"Checked {len(validator.documents)} document(s): "
+        extra = (f" ({context} more loaded to resolve cross-references)"
+                 if context else "")
+        print(f"Checked {checked} document(s){extra}: "
               f"{len(errors)} error(s), {len(warnings)} warning(s).")
 
     if errors:

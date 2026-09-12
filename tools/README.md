@@ -23,6 +23,21 @@ python3 tools/validate_docs.py . --today 2026-09-12     # pin the date for CI
 
 Exit codes: `0` clean, `1` errors found (or warnings with `--strict`), `2` bad invocation.
 
+### Scoped runs
+
+Findings are reported only for the path you name, but the **whole repository is always
+loaded** so that document-ID uniqueness and the `upstream_docs` / `downstream_docs` graph
+resolve. Without this, validating a single file would report every document it references as
+unknown:
+
+```
+$ python3 tools/validate_docs.py examples/meridian/01-architecture/tad-order-processing.md
+Checked 1 document(s) (88 more loaded to resolve cross-references): 0 error(s), 0 warning(s).
+```
+
+The repository root is found by walking up for a `.git` directory or a `templates/`
+directory; outside a repository the tool falls back to the target itself.
+
 ### Rules enforced
 
 | Rule | Severity | Check |
