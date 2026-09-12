@@ -401,7 +401,10 @@ class Validator:
             if parse_iso_date(value) is None:
                 self.add(rel, "FM-08", "error", f"{key} '{value}' is not a valid ISO-8601 date")
 
-        if status == "approved" and not relaxed:
+        # `on-change` documents (ADRs, BRDs, impact assessments) are historical records:
+        # they are exempt from calendar review, so review dates are not required.
+        # See guides/03-front-matter-schema.md §6.
+        if status == "approved" and not relaxed and cycle != "on-change":
             for key in APPROVED_EXTRA_FIELDS:
                 if not fm.get(key):
                     self.add(rel, "FM-09", "error",
@@ -542,7 +545,12 @@ class Validator:
             h1 = next((l[2:].strip() for l in lines if l.startswith("# ")), None)
             if isinstance(title, str) and title and h1 is not None:
                 normalise = lambda s: re.sub(r"\s+", " ", s.replace("\\", "")).strip()
-                if normalise(h1) != normalise(title):
+                candidate = normalise(h1)
+                # ADRs conventionally prefix the H1 with the document ID
+                # ("ADR-0007: Externalise ..."); accept that form.
+                if doc.doc_id and candidate.startswith(f"{doc.doc_id}:"):
+                    candidate = candidate[len(doc.doc_id) + 1:].strip()
+                if candidate != normalise(title):
                     self.add(doc.rel, "MD-02", "warning",
                              f"H1 '{h1}' does not match front-matter title '{title}'")
 
@@ -721,8 +729,11 @@ def main(argv: list[str] | None = None) -> int:
             if not rows:
                 print("  no downstream documents declared")
             for row in rows:
+                # Name the edge for indirect rows: indentation alone reads as if the
+                # row above were the parent, which is misleading in an impact report.
+                via = f"  (via {row['via']})" if row["depth"] > 1 else ""
                 print(f"  {'  ' * (row['depth'] - 1)}└─ {row['doc_id']:<16} "
-                      f"{row['path']}  [owner: {row['owner'] or 'unassigned'}]")
+                      f"{row['path']}  [owner: {row['owner'] or 'unassigned'}]{via}")
             print(f"\n{len(rows)} downstream document(s). "
                   f"This is the mechanical floor — extend it with judgement "
                   f"(see templates/06-change/impact-assessment.md).")

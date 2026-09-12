@@ -16,8 +16,9 @@ in a dependency graph — so a reader can start anywhere and navigate to the ans
 | Directory | Contents |
 | --- | --- |
 | [`guides/`](guides/) | How to write, review, diagram, and govern documents in this system. Read [`guides/00-how-to-use-this-repo.md`](guides/00-how-to-use-this-repo.md) first. |
-| [`templates/`](templates/) | 55 blank document templates, grouped by layer (foundations → architecture → data → interfaces → domain → operations → change). Copy, don't edit in place. |
-| [`examples/meridian/`](examples/meridian/) | A complete worked example: **Meridian**, a fictional 30-year-old order-to-cash and portfolio management platform. Every major template is filled in against it. |
+| [`templates/`](templates/) | 58 blank document templates, grouped by layer (foundations → architecture → data → interfaces → domain → operations → change). Copy, don't edit in place. |
+| [`examples/meridian/`](examples/meridian/) | A complete worked example: **Meridian**, a fictional 30-year-old order-to-cash and portfolio management platform. 22 documents filled in against it, at the depth real documentation needs. |
+| [`CATALOG.md`](CATALOG.md) | Generated inventory of every document, with owners, status, and review dates. |
 | [`tools/`](tools/) | Zero-dependency Python validators for front matter, document IDs, links, and diagrams. Wired into CI. |
 | [`.github/`](.github/) | PR template, documentation issue forms, and the docs-quality workflow. |
 
@@ -204,12 +205,13 @@ flowchart LR
 
 Highlights worth reading even if you never use the templates:
 
-- [**TAD — Order Processing Subsystem**](examples/meridian/01-architecture/tad-order-processing.md) — a complete technical architecture document for a legacy subsystem, including a decoding engine, hold framework, and vendor dispatch.
-- [**Data Lineage — Order to Cash**](examples/meridian/02-data/lineage-order-to-cash.md) — field-level lineage across 9 hops from order capture to general ledger, with transformation logic and reconciliation controls.
-- [**Data Lineage — Sales Incentive Payout**](examples/meridian/02-data/lineage-sales-incentive-payout.md) — the harder case: lineage for a derived, restated, and retroactively adjusted metric.
-- [**Data Governance Charter**](examples/meridian/02-data/data-governance-charter.md) — an operating model for data ownership across three domains that share one schema.
-- [**ICD — Vendor Dispatch Outbound**](examples/meridian/03-interfaces/icd-vendor-dispatch-outbound.md) — a fixed-width/EDI interface contract with control totals, error handling, and versioning.
-- [**Legacy System Archaeology — Order Decoder**](examples/meridian/01-architecture/legacy-system-archaeology-order-decoder.md) — how behaviour was recovered from 40,000 lines of undocumented code, with confidence levels on every finding.
+- [**TAD — Order Processing**](examples/meridian/01-architecture/tad-order-processing.md) — a complete technical architecture document for a legacy subsystem: C4 levels 1–3, NFRs measured against reality (three of them not met), ten failure modes with a silent-failure analysis, and a technical debt register grounded in incident history.
+- [**Data Lineage — Order to Cash**](examples/meridian/02-data/lineage-order-to-cash.md) — field-level lineage across nine hops from order capture to general ledger, with four grain changes called out, the 9.7% exclusion that explains most of the gap between orders placed and orders invoiced, and per-hop reconciliation controls.
+- [**Data Lineage — Sales Incentive Payout**](examples/meridian/02-data/lineage-sales-incentive-payout.md) — the harder case: a derived, restated, retroactively adjusted metric, including a reproducibility test that *failed* for 41 of 200 sampled dealers.
+- [**Data Governance Charter**](examples/meridian/02-data/data-governance-charter.md) — decision rights with SLAs and an automatic deadlock escalation, column-level ownership of six contested cross-domain columns, and one objective that has not moved in two years, stated as unmet rather than quietly dropped.
+- [**ICD — Vendor Dispatch Outbound**](examples/meridian/03-interfaces/icd-vendor-dispatch-outbound.md) — a full EDI 850 contract: field specification, three-level acknowledgement semantics, control totals, error catalog, and 14 certification scenarios.
+- [**Legacy System Archaeology — Order Decoder**](examples/meridian/01-architecture/legacy-system-archaeology-order-decoder.md) — how behaviour was recovered from 41,000 lines of undocumented COBOL, with a confidence level and evidence on every finding, including a non-determinism defect that four SMEs and two code readers had missed.
+- [**Runbook — Nightly Order Cycle**](examples/meridian/05-operations/runbook-nightly-order-cycle.md) — a 03:00 procedure with scope assessment before action, financial-risk warnings before mutating steps, and an execution log recording where it was found wrong.
 
 ---
 
@@ -267,12 +269,17 @@ and let it tell you which existing documents you are obliged to update.
 ## Validation
 
 ```bash
-python3 tools/validate_docs.py .     # front matter, IDs, links, diagrams, staleness
-python3 tools/build_catalog.py .     # regenerate the catalog table above
+python3 tools/validate_docs.py .                      # front matter, IDs, links, diagrams
+python3 tools/validate_docs.py . --stale-report       # documents past their review date
+python3 tools/validate_docs.py . --impact TAD-OPS-001 # downstream dependency traversal
+python3 tools/build_catalog.py .                      # regenerate CATALOG.md
 ```
 
 Both are standard-library Python 3.9+, no install step. They run on every pull request via
-[`.github/workflows/docs-quality.yml`](.github/workflows/docs-quality.yml).
+[`.github/workflows/docs-quality.yml`](.github/workflows/docs-quality.yml), which also posts
+the downstream impact of each changed document to the PR summary.
+
+Rules enforced, and how to extend them: [`tools/README.md`](tools/README.md).
 
 ---
 

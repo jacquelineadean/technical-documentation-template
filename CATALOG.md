@@ -7,10 +7,62 @@
 
 | | Count |
 | --- | --- |
-| Documents | 9 |
+| Documents | 31 |
 | Templates available | 58 |
-| 🟢 approved | 9 |
+| 🟢 approved | 31 |
 | Overdue for review | 0 |
+
+## 0 · Foundations
+
+| Doc ID | Title | Status | Version | Owner | Next review | Path |
+| --- | --- | --- | --- | --- | --- | --- |
+| `DMAP-MER-001` | [Meridian — Domain Map](examples/meridian/00-foundations/domain-map.md) | 🟢 approved | 2.1.0 | Head of Platform Architecture | 2027-06-18 | `examples/meridian/00-foundations/domain-map.md` |
+| `SYS-MER-001` | [Meridian — System Profile](examples/meridian/00-foundations/system-profile.md) | 🟢 approved | 3.2.0 | Meridian Platform Owner | 2027-07-14 | `examples/meridian/00-foundations/system-profile.md` |
+
+## 1 · Architecture
+
+| Doc ID | Title | Status | Version | Owner | Next review | Path |
+| --- | --- | --- | --- | --- | --- | --- |
+| `ADR-OPS-0007` | [Externalise hold evaluation from the decoder](examples/meridian/01-architecture/adr-0007-externalise-hold-evaluation.md) | 🟢 approved | 1.2.0 | Order Management Architecture Lead | — | `examples/meridian/01-architecture/adr-0007-externalise-hold-evaluation.md` |
+| `ADR-PLR-0012` | [Hold package decoding rules as reference data rather than code](examples/meridian/01-architecture/adr-0012-package-decoding-rules-as-data.md) | 🟢 approved | 1.1.0 | Head of Platform Architecture | — | `examples/meridian/01-architecture/adr-0012-package-decoding-rules-as-data.md` |
+| `BAT-MER-001` | [Meridian — Batch and Scheduling Architecture](examples/meridian/01-architecture/batch-and-scheduling-architecture.md) | 🟢 approved | 2.4.0 | Head of Platform Architecture | 2027-01-22 | `examples/meridian/01-architecture/batch-and-scheduling-architecture.md` |
+| `LGA-OPS-001` | [ORDDEC01 Order Decoder — Legacy System Archaeology](examples/meridian/01-architecture/legacy-system-archaeology-order-decoder.md) | 🟢 approved | 2.0.0 | Order Management Architecture Lead | 2027-02-12 | `examples/meridian/01-architecture/legacy-system-archaeology-order-decoder.md` |
+| `TAD-OPS-001` | [Meridian Order Processing — Technical Architecture Document](examples/meridian/01-architecture/tad-order-processing.md) | 🟢 approved | 4.1.0 | Order Management Architecture Lead | 2027-02-05 | `examples/meridian/01-architecture/tad-order-processing.md` |
+
+## 2 · Data
+
+| Doc ID | Title | Status | Version | Owner | Next review | Path |
+| --- | --- | --- | --- | --- | --- | --- |
+| `DCT-VND-001` | [Fulfilment Vendors → Meridian — Data Contract for Shipping Confirmation](examples/meridian/02-data/data-contract-vendor-shipping-confirmation.md) | 🟢 approved | 2.1.0 | Vendor Integration Lead | 2026-12-11 | `examples/meridian/02-data/data-contract-vendor-shipping-confirmation.md` |
+| `DD-OPS-001` | [Order Line — Data Dictionary](examples/meridian/02-data/data-dictionary-order-line.md) | 🟢 approved | 4.0.0 | Order Data Steward | 2026-12-24 | `examples/meridian/02-data/data-dictionary-order-line.md` |
+| `DGC-MER-001` | [Meridian — Data Governance Charter](examples/meridian/02-data/data-governance-charter.md) | 🟢 approved | 3.0.0 | Data Governance Lead | 2026-11-20 | `examples/meridian/02-data/data-governance-charter.md` |
+| `DLN-OPS-001` | [Order to Cash — Data Lineage](examples/meridian/02-data/lineage-order-to-cash.md) | 🟢 approved | 3.1.0 | Order Data Steward | 2026-12-30 | `examples/meridian/02-data/lineage-order-to-cash.md` |
+| `DLN-SPR-001` | [Sales Incentive Payout — Data Lineage](examples/meridian/02-data/lineage-sales-incentive-payout.md) | 🟢 approved | 2.2.0 | Sales Data Steward | 2027-01-08 | `examples/meridian/02-data/lineage-sales-incentive-payout.md` |
+| `MET-SPR-001` | [Sales Reporting — Metric and KPI Definition Catalog](examples/meridian/02-data/metric-catalog-sales-reporting.md) | 🟢 approved | 3.1.0 | Sales Data Steward | 2026-12-05 | `examples/meridian/02-data/metric-catalog-sales-reporting.md` |
+| `RDR-PLR-001` | [Meridian — Reference Data and Code Set Registry](examples/meridian/02-data/reference-data-option-codes.md) | 🟢 approved | 2.3.0 | Portfolio Data Steward | 2026-10-15 | `examples/meridian/02-data/reference-data-option-codes.md` |
+
+## 3 · Interfaces
+
+| Doc ID | Title | Status | Version | Owner | Next review | Path |
+| --- | --- | --- | --- | --- | --- | --- |
+| `EDR-MER-001` | [Meridian — External Dependency Register](examples/meridian/03-interfaces/external-dependency-register.md) | 🟢 approved | 3.1.0 | Service Management Lead | 2026-11-06 | `examples/meridian/03-interfaces/external-dependency-register.md` |
+| `ICAT-MER-001` | [Meridian — Interface Catalog](examples/meridian/03-interfaces/interface-catalog.md) | 🟢 approved | 5.2.0 | Integration Lead | 2026-11-19 | `examples/meridian/03-interfaces/interface-catalog.md` |
+| `ICD-VND-001` | [Vendor Dispatch Outbound (EDI 850) — Interface Control Document](examples/meridian/03-interfaces/icd-vendor-dispatch-outbound.md) | 🟢 approved | 4.2.0 | Vendor Integration Lead | 2027-01-30 | `examples/meridian/03-interfaces/icd-vendor-dispatch-outbound.md` |
+
+## 4 · Domain
+
+| Doc ID | Title | Status | Version | Owner | Next review | Path |
+| --- | --- | --- | --- | --- | --- | --- |
+| `DOM-OPS-001` | [Order Processing — Domain Overview](examples/meridian/04-domains/order-processing.md) | 🟢 approved | 3.2.0 | Order Management Product Owner | 2027-01-17 | `examples/meridian/04-domains/order-processing.md` |
+| `DOM-PLR-001` | [Product Launch Readiness — Domain Overview](examples/meridian/04-domains/product-launch-readiness.md) | 🟢 approved | 2.1.0 | Portfolio Management Product Owner | 2026-12-12 | `examples/meridian/04-domains/product-launch-readiness.md` |
+| `DOM-SPR-001` | [Sales Processing and Reporting — Domain Overview](examples/meridian/04-domains/sales-processing-and-reporting.md) | 🟢 approved | 2.3.0 | Sales Operations Product Owner | 2027-01-24 | `examples/meridian/04-domains/sales-processing-and-reporting.md` |
+
+## 5 · Operations
+
+| Doc ID | Title | Status | Version | Owner | Next review | Path |
+| --- | --- | --- | --- | --- | --- | --- |
+| `JSC-MER-001` | [Meridian — Job Schedule Catalog](examples/meridian/05-operations/job-schedule-catalog.md) | 🟢 approved | 4.1.0 | SRE Lead | 2026-11-11 | `examples/meridian/05-operations/job-schedule-catalog.md` |
+| `RUN-OPS-001` | [Nightly Order Cycle Failure — Runbook](examples/meridian/05-operations/runbook-nightly-order-cycle.md) | 🟢 approved | 5.3.0 | SRE Lead | 2026-11-14 | `examples/meridian/05-operations/runbook-nightly-order-cycle.md` |
 
 ## Meta
 
@@ -31,3 +83,25 @@
 | Owner | Documents |
 | --- | --- |
 | Documentation Architect | 9 |
+| Head of Platform Architecture | 3 |
+| Order Management Architecture Lead | 3 |
+| Order Data Steward | 2 |
+| SRE Lead | 2 |
+| Sales Data Steward | 2 |
+| Vendor Integration Lead | 2 |
+| Data Governance Lead | 1 |
+| Integration Lead | 1 |
+| Meridian Platform Owner | 1 |
+| Order Management Product Owner | 1 |
+| Portfolio Data Steward | 1 |
+| Portfolio Management Product Owner | 1 |
+| Sales Operations Product Owner | 1 |
+| Service Management Lead | 1 |
+
+## Coverage by system
+
+Document types present for each system, against the 57 available types.
+
+| System | Types present | Coverage |
+| --- | --- | --- |
+| MERIDIAN | 18 | 31% |
