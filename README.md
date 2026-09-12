@@ -169,21 +169,21 @@ database, a decoding engine at its heart, ~200 batch jobs, and 40+ external part
 ```mermaid
 flowchart LR
     subgraph PLR["Product Launch Readiness"]
-        A1[Portfolio & Package Definition]
-        A2[Option Code Compatibility]
-        A3[Launch Readiness Gates]
+        A1["Portfolio &amp; package definition"]
+        A2["Option code compatibility"]
+        A3["Launch readiness gates"]
     end
     subgraph OPS["Order Processing"]
-        B1[Order Line Decoding]
-        B2[Holds & Cancellations]
-        B3[Vendor Dispatch & ASN]
-        B4[Invoicing & Reimbursement]
+        B1["Order line decoding"]
+        B2["Holds &amp; cancellations"]
+        B3["Vendor dispatch &amp; ASN"]
+        B4["Invoicing &amp; reimbursement"]
     end
-    subgraph SPR["Sales Processing & Reporting"]
-        C1[Objective Planning]
-        C2[Incentive Tracking]
-        C3[Inventory Planning]
-        C4[Credit / Debit Adjustments]
+    subgraph SPR["Sales Processing &amp; Reporting"]
+        C1["Objective planning"]
+        C2["Incentive tracking"]
+        C3["Inventory planning"]
+        C4["Credit / debit adjustments"]
     end
 
     A1 --> B1

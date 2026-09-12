@@ -568,21 +568,46 @@ class Validator:
                              "approved document contains an unresolved TODO/TBD/FIXME", lineno)
 
     def _check_mermaid(self, doc: Document, lines: list[str], fence_line: int) -> None:
-        for line in lines[fence_line:]:
+        typed = False
+        for offset, line in enumerate(lines[fence_line:], start=fence_line + 1):
             stripped = line.strip()
-            if not stripped:
-                continue
             if stripped.startswith("```"):
-                self.add(doc.rel, "MD-01", "error", "empty mermaid block", fence_line)
+                if not typed:
+                    self.add(doc.rel, "MD-01", "error", "empty mermaid block", fence_line)
                 return
-            if stripped.startswith("%%"):
+            if not stripped or stripped.startswith("%%"):
                 continue
-            first_token = re.split(r"[\s;]", stripped, maxsplit=1)[0].lower()
-            if first_token not in MERMAID_TYPES:
-                self.add(doc.rel, "MD-01", "error",
-                         f"mermaid block starts with '{first_token}', which is not a "
-                         f"recognised diagram type", fence_line + 1)
-            return
+
+            if not typed:
+                typed = True
+                first_token = re.split(r"[\s;]", stripped, maxsplit=1)[0].lower()
+                if first_token not in MERMAID_TYPES:
+                    self.add(doc.rel, "MD-01", "error",
+                             f"mermaid block starts with '{first_token}', which is not a "
+                             f"recognised diagram type", offset)
+
+            self._check_mermaid_labels(doc, stripped, offset)
+
+    def _check_mermaid_labels(self, doc: Document, line: str, lineno: int) -> None:
+        """MD-04: label text must escape characters Mermaid treats as syntax.
+
+        Only label *contents* are checked. A bare ``&`` elsewhere on the line is
+        legitimate chaining syntax (``A --> B & C``), so flagging it would be wrong.
+        """
+        labels = re.findall(r'"([^"]*)"', line)
+        labels += re.findall(r"\[([^\[\]\"]*)\]", line)
+        for label in labels:
+            if re.search(r"&(?!amp;|lt;|gt;|quot;|nbsp;|#\d+;|#x[0-9A-Fa-f]+;)", label):
+                self.add(doc.rel, "MD-04", "warning",
+                         f"unescaped '&' in a Mermaid label: {label.strip()[:60]!r} "
+                         f"— use &amp; (guides/02-diagram-conventions.md §11)", lineno)
+
+        # erDiagram attribute types: Mermaid cannot parse a comma inside decimal(11,2).
+        if re.search(r"\b(decimal|numeric|char|varchar)\s*\(\s*\d+\s*,", line):
+            self.add(doc.rel, "MD-04", "warning",
+                     "comma inside a Mermaid type declaration — write decimal(11-2) and "
+                     "note the real type in the data dictionary "
+                     "(guides/02-diagram-conventions.md §7)", lineno)
 
     # -- corpus-level -------------------------------------------------------------
 

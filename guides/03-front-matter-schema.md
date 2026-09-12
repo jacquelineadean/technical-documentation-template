@@ -316,5 +316,10 @@ repository. The example set used by `examples/meridian/`:
 | LN-01 | Relative links resolve to an existing file | error |
 | LN-02 | Anchor links resolve to a heading in the target | warning |
 | MD-01 | Mermaid fences are balanced and declare a supported diagram type | error |
-| MD-02 | H1 matches front-matter `title` | warning |
+| MD-02 | H1 matches front-matter `title` (an ADR's `<DOC-ID>: ` prefix is accepted) | warning |
 | MD-03 | No unresolved `TODO`/`TBD` without an owner in an `approved` document | warning |
+| MD-04 | Mermaid labels escape `&`; no commas inside `erDiagram` type declarations | warning |
+
+> **FM-09 does not apply to `review_cycle: on-change` documents.** ADRs, BRDs, impact
+> assessments, and cutover plans are historical records, exempt from calendar review per §6,
+> so review dates are not required on them.

@@ -35,7 +35,7 @@ Exit codes: `0` clean, `1` errors found (or warnings with `--strict`), `2` bad i
 | FM-06 | error | `status`, `classification`, `review_cycle` are valid enum values |
 | FM-07 | error | `version` is valid semver |
 | FM-08 | error | Dates are real ISO-8601 dates |
-| FM-09 | error | `approved` implies `last_reviewed`, `next_review`, `review_cycle` |
+| FM-09 | error | `approved` implies `last_reviewed`, `next_review`, `review_cycle` — **except** `review_cycle: on-change` documents, which are historical records exempt from calendar review |
 | FM-10 | error | `superseded` implies `superseded_by` |
 | FM-11 | warning | `upstream_docs`/`downstream_docs` resolve to known IDs |
 | FM-12 | warning | `next_review` is in the future |
@@ -43,8 +43,9 @@ Exit codes: `0` clean, `1` errors found (or warnings with `--strict`), `2` bad i
 | LN-01 | error | Relative links resolve to an existing file |
 | LN-02 | warning | Anchor links resolve to a heading in the target |
 | MD-01 | error | Code fences balanced; mermaid blocks declare a known diagram type |
-| MD-02 | warning | H1 matches front-matter `title` |
-| MD-03 | warning | No unresolved TODO/TBD/FIXME in an `approved` document |
+| MD-02 | warning | H1 matches front-matter `title`; an ADR's `<DOC-ID>: ` prefix is accepted |
+| MD-03 | warning | No unresolved TODO/TBD/FIXME in an `approved` document (mentions inside backticks or quotes are ignored) |
+| MD-04 | warning | Mermaid labels escape `&`; no commas inside `erDiagram` type declarations |
 
 Full definitions: [`guides/03-front-matter-schema.md`](../guides/03-front-matter-schema.md).
 
