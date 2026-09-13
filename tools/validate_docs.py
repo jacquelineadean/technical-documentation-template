@@ -92,6 +92,10 @@ MERMAID_TYPES = {
 
 SKIP_DIRS = {".git", "node_modules", ".venv", "venv", "__pycache__", ".github"}
 
+# Documents with fewer sections than this are short enough to read without a
+# table of contents, so MD-05 does not ask for one.
+CONTENTS_MIN_SECTIONS = 3
+
 # Front matter keys holding lists of document IDs, for the impact graph.
 GRAPH_FIELDS = ("upstream_docs", "downstream_docs")
 
@@ -269,9 +273,13 @@ def slugify(heading: str) -> str:
     whitespace character to one hyphen. Runs of spaces are *not* collapsed —
     "ICD — Interface" becomes "icd--interface" because the em dash is removed
     and both surrounding spaces survive as hyphens.
+
+    Leading and trailing hyphens are kept, because GitHub keeps them: a heading
+    ending in an emoji ("7. Manual interfaces ⚠️") anchors as
+    "#7-manual-interfaces-", the space before the stripped emoji included.
     """
     slug = re.sub(r"[^\w\s-]", "", heading.lower())
-    return re.sub(r"\s", "-", slug).strip("-")
+    return re.sub(r"\s", "-", slug)
 
 
 def strip_code_and_quotes(line: str) -> str:
@@ -583,6 +591,48 @@ class Validator:
                 if re.search(r"\b(TODO|TBD|FIXME)\b", strip_code_and_quotes(line)):
                     self.add(doc.rel, "MD-03", "warning",
                              "approved document contains an unresolved TODO/TBD/FIXME", lineno)
+
+        # MD-05: a Contents section that lists every top-level section.
+        self._check_contents(doc, lines)
+
+    def _check_contents(self, doc: Document, lines: list[str]) -> None:
+        """MD-05: every document opens with a Contents table covering its sections.
+
+        Checks coverage, not just presence. A document that grows a section and
+        leaves the Contents behind is the failure this catches — a stale table of
+        contents is worse than none, because a reader trusts it and concludes the
+        section does not exist.
+        """
+        headings: list[tuple[int, str]] = []
+        in_fence = False
+        for lineno, line in enumerate(lines, start=1):
+            if line.lstrip().startswith("```"):
+                in_fence = not in_fence
+                continue
+            if not in_fence and line.startswith("## "):
+                headings.append((lineno, line[3:].strip()))
+
+        sections = [(n, h) for n, h in headings if h != "Contents"]
+        if len(sections) < CONTENTS_MIN_SECTIONS:
+            return
+
+        start = next((n for n, h in headings if h == "Contents"), None)
+        if start is None:
+            self.add(doc.rel, "MD-05", "warning",
+                     f"no '## Contents' section, but the document has "
+                     f"{len(sections)} sections "
+                     f"(guides/01-documentation-standards.md#14-contents)")
+            return
+
+        end = next((n for n, _ in sections if n > start), len(lines) + 1)
+        block = "\n".join(lines[start:end - 1])
+        missing = [h for _, h in sections if f"(#{slugify(h)})" not in block]
+        if missing:
+            shown = ", ".join(repr(h) for h in missing[:3])
+            more = f" (+{len(missing) - 3} more)" if len(missing) > 3 else ""
+            self.add(doc.rel, "MD-05", "warning",
+                     f"Contents does not link to {len(missing)} section(s): "
+                     f"{shown}{more}", start)
 
     def _check_mermaid(self, doc: Document, lines: list[str], fence_line: int) -> None:
         typed = False

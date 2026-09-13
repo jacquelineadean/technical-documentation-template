@@ -14,6 +14,20 @@ tags: [meta, onboarding]
 
 # How to Use This Repository
 
+---
+
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [The problem this solves](#the-problem-this-solves) | Four structural causes of documentation decay, and the countermeasure for each |
+| [The seven layers](#the-seven-layers) | Layer, question answered, and typical audience |
+| [Three usage modes](#three-usage-modes) | Documenting a system from scratch, documenting one change, answering a question |
+| [Non-negotiables](#non-negotiables) | Conventions enforced by `tools/validate_docs.py` |
+| [Anti-patterns this repository deliberately blocks](#anti-patterns-this-repository-deliberately-blocks) | Anti-pattern → practice adopted instead |
+
+---
+
 ## The problem this solves
 
 Large legacy platforms fail to stay documented for structural reasons, not lazy ones:

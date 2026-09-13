@@ -11,6 +11,20 @@ in a dependency graph — so a reader can start anywhere and navigate to the ans
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [What is in here](#what-is-in-here) | Directory map: guides, templates, worked example, catalog, tooling, CI |
+| [The document model](#the-document-model) | Seven layers, their dependency graph, and the full template index |
+| [The worked example: Meridian](#the-worked-example-meridian) | Characteristics of the example platform; the documents worth reading first |
+| [Getting started](#getting-started) | Copy-and-fill sequence for a new system; entry point for documenting a change |
+| [Conventions in one screen](#conventions-in-one-screen) | Front matter, single owner, review cadence, Mermaid-only diagrams, confidence levels |
+| [Validation](#validation) | Validator and catalog commands; CI wiring |
+| [Contributing](#contributing) | PR expectations for templates, examples, and new document types |
+
+---
+
 ## What is in here
 
 | Directory | Contents |
@@ -252,6 +266,8 @@ and let it tell you which existing documents you are obliged to update.
 - **Every document carries YAML front matter.** Schema and the document-ID registry are in
   [`guides/03-front-matter-schema.md`](guides/03-front-matter-schema.md). CI rejects
   documents that lack it.
+- **Every document opens with a `## Contents` table** linking to each of its sections, back
+  matter included. CI flags a table that has fallen behind the document it describes.
 - **Every document has one accountable owner** — a named role, never "the team".
 - **Every document states its review cadence** and its last review date. A document past
   its review date is flagged by CI as stale, not silently trusted.

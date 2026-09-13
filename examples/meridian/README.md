@@ -25,6 +25,18 @@ It was designed to have the characteristics that make documentation hard:
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [The system](#the-system) | Enterprise context diagram: dealers, vendors, ERP, PLM, warehouse |
+| [The three domains](#the-three-domains) | Product Launch Readiness, Order Processing, Sales Processing — and their couplings |
+| [Documents](#documents) | The 22 example documents by layer, each with what it demonstrates |
+| [Reading paths](#reading-paths) | Entry points by interest: best single example, legacy start, governance, partners, unknowns |
+| [Try the impact graph](#try-the-impact-graph) | Commands that traverse declared dependencies for impact analysis |
+
+---
+
 ## The system
 
 ```mermaid

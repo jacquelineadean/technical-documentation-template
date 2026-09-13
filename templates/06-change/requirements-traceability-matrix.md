@@ -26,6 +26,26 @@ tags: [traceability, qa]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Coverage summary](#1-coverage-summary) | Requirement counts with design, test, and evidence coverage percentages |
+| [2. Matrix](#2-matrix) | Requirement → design → rules → components → interfaces → tests → evidence |
+| [3. Reverse traceability](#3-reverse-traceability) | Implementation back to requirement, exposing orphaned work |
+| [4. Test coverage](#4-test-coverage) | Test levels covering each requirement, and requirements left uncovered |
+| [5. NFR traceability](#5-nfr-traceability) | NFRs to design response, verification method, and result |
+| [6. Business rule traceability](#6-business-rule-traceability) | Business rules to requirement, implementation, tests, catalog entry |
+| [7. Interface traceability](#7-interface-traceability) | Interfaces to requirement, ICD, certification, counterparty sign-off |
+| [8. Data traceability](#8-data-traceability) | Data elements to dictionary, lineage, DQ rules, classification |
+| [9. Compliance traceability](#9-compliance-traceability) | Regulatory obligations to controls, tests, and evidence |
+| [10. Defects](#10-defects) | Defects linked to requirement and test, with status and resolution |
+| [11. Change control](#11-change-control) | Requirements added, modified, removed, or deferred, and the traceability effect |
+| [12. Sign-off](#12-sign-off) | Acceptance per requirement set, with conditions |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Coverage summary
 
 | | Count | % |

@@ -20,6 +20,21 @@ detected rather than discovered during an incident.
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Accountability model](#1-accountability-model) | Document Owner, Domain Steward, Architect — accountabilities and typical holders |
+| [2. Lifecycle](#2-lifecycle) | State machine from draft to retired, with per-transition requirements |
+| [3. Update triggers](#3-update-triggers) | Events obliging a documentation change as part of the change itself |
+| [4. Review cadence and staleness](#4-review-cadence-and-staleness) | Cadence, staleness handling, and why stale documents are never deleted |
+| [5. Approval matrix](#5-approval-matrix) | Approver and forum per document type |
+| [6. Handling disagreement](#6-handling-disagreement) | Recording competing claims, then resolving by evidence |
+| [7. Metrics for the documentation system itself](#7-metrics-for-the-documentation-system-itself) | Quarterly indicators of corpus health, with targets |
+| [8. Archival](#8-archival) | Decommissioning procedure — retire and annotate, never delete |
+
+---
+
 ## 1. Accountability model
 
 | Role | Accountable for | Typically held by |

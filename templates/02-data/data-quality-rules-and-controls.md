@@ -25,6 +25,23 @@ tags: [data-quality]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Coverage](#1-coverage) | CDE coverage, rule counts, automation ratio |
+| [2. Dimensions](#2-dimensions) | The six dimensions, the question each asks, and its typical rule shape |
+| [3. Rule register](#3-rule-register) | Rule register with threshold, severity, frequency, owner, breach action |
+| [4. Rule definitions](#4-rule-definitions) | Per-rule definition: logic, scope, exclusions, expected result |
+| [5. Control points](#5-control-points) | Where each rule executes against the lineage hops, and coverage gaps |
+| [6. Breach handling](#6-breach-handling) | Breach severity ladder with notification, containment, and root-cause deadlines |
+| [7. Quality scorecard](#7-quality-scorecard) | Scorecard by element and dimension, with period trend |
+| [8. Gaps](#8-gaps) | CDEs with no rule, and dimensions that cannot be measured |
+| [9. Known issues](#9-known-issues) | Standing accepted defects, so consumers stop rediscovering them |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Coverage
 
 | | |

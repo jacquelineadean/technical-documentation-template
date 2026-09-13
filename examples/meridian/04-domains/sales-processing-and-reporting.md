@@ -26,6 +26,24 @@ tags: [domain, sales, incentives, reporting]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Scope](#1-scope) | Domain `SPR` — objectives, attainment, incentive settlement, inventory planning |
+| [2. Business context](#2-business-context) | 3,200 dealers, about 19,200 objectives per quarter |
+| [3. Capabilities](#3-capabilities) | Objective planning, eligibility, attainment, accrual, payout, adjustments |
+| [4. Actors](#4-actors) | Sales Finance, Sales Operations, Demand Planning, the settlement bank |
+| [5. Core concepts](#5-core-concepts) | Objective, eligible unit, attainment, accrual — including the six exclusion categories |
+| [6. Process flow](#6-process-flow) | Objectives to settlement, with field-level detail in the lineage document |
+| [7. Business rules — summary](#7-business-rules--summary) | SPR rules and where each is implemented |
+| [8. Interfaces](#8-interfaces) | Demand Planning inbound and the ISO 20022 settlement instruction outbound |
+| [9. Cross-domain position](#9-cross-domain-position) | The asymmetric entanglement with OPS, including the shared-kernel write |
+| [10. Known pain points](#10-known-pain-points) | Accrual not reproducible point-in-time; the 45-day rule against a 10-day window |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Scope
 
 | | |

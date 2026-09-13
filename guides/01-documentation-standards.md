@@ -19,6 +19,23 @@ rather than re-litigating style in each PR.
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Structure](#1-structure) | File naming, heading hierarchy, length ceilings, the Contents table |
+| [2. Voice and tone](#2-voice-and-tone) | Present tense, active voice, named actors, numbers over adjectives |
+| [3. Confidence levels](#3-confidence-levels) | `✅ Verified` / `🟡 Inferred` / `🔴 Assumed` — evidence and promotion rules |
+| [4. Tables](#4-tables) | Header rows, identifier columns, `—` versus `🔴 Unknown` in empty cells |
+| [5. Identifiers](#5-identifiers) | Identifier formats per kind: rules, fields, interfaces, jobs, decisions |
+| [6. Cross-references](#6-cross-references) | Relative links over duplication; citing source code by path and revision |
+| [7. Numbers, dates, and units](#7-numbers-dates-and-units) | ISO-8601 dates, 24-hour times with timezone, explicit units and precision |
+| [8. Diagrams](#8-diagrams) | Caption requirements and the prose-carries-the-fact rule |
+| [9. What must never appear in a document](#9-what-must-never-appear-in-a-document) | Prohibited content — credentials, personal data, unattributed blame — and the substitute |
+| [10. Review expectations](#10-review-expectations) | The three checks reviewers apply above all others |
+
+---
+
 ## 1. Structure
 
 ### 1.1 File naming
@@ -42,6 +59,32 @@ Numbering makes "see §7.3" possible in a review comment or an incident bridge.
 If a document exceeds ~2,500 words, it is usually two documents. The exceptions — TAD,
 Data Lineage, Data Governance Charter, ICD — are exceptions because splitting them would
 break a contract or a chain of reasoning.
+
+### 1.4 Contents
+
+Every document carries a `## Contents` table, placed between the H1 — with any purpose note
+— and the first section:
+
+```markdown
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Scope and audience](#1-scope-and-audience) | In-scope elements, exclusions, reader profiles |
+| [2. Architectural drivers](#2-architectural-drivers) | Forces shaping the architecture, including historical ones |
+```
+
+| Rule | Detail |
+| --- | --- |
+| Coverage | One row per `##` section, in document order, **including back matter** — appendices and the change log. A reader should not have to guess that a change log exists. |
+| Link text | The heading verbatim, so the table and the section cannot drift apart. |
+| Anchors | GitHub's algorithm: lowercase, drop anything that is not word/space/hyphen, spaces to hyphens. Runs of spaces are not collapsed, and leading or trailing hyphens are kept — `4. Context — C4 Level 1` anchors as `#4-context--c4-level-1`, and `7. Manual interfaces ⚠️` as `#7-manual-interfaces-`. |
+| Summaries | Fragments, not sentences — the terms a reader is scanning for, comma- or semicolon-separated, no trailing full stop. |
+| Exemption | Documents with fewer than three sections do not need one. |
+
+`MD-05` checks that the table exists **and** that it links to every section. A Contents table
+left behind by a new section is worse than none: a reader trusts it and concludes the section
+is not there.
 
 ---
 

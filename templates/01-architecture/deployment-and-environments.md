@@ -25,6 +25,25 @@ tags: [deployment, environments]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Environment inventory](#1-environment-inventory) | Environments, purpose, data, refresh, availability, access, cost |
+| [2. Environment parity](#2-environment-parity) | Divergence from production, dimension by dimension, with the risk each carries |
+| [3. Production topology](#3-production-topology) | Nodes, roles, specs, sites, failover posture |
+| [4. Deployment pipeline](#4-deployment-pipeline) | Pipeline stages, tooling, gates, approvers, artefact management |
+| [5. Deployment procedures](#5-deployment-procedures) | Per-component method, downtime, rollback and its window; database changes |
+| [6. Configuration management](#6-configuration-management) | Configuration store, version control, promotion, drift detection |
+| [7. Release calendar and windows](#7-release-calendar-and-windows) | Permitted windows, change classes, approvals, freeze periods |
+| [8. Non-production data](#8-non-production-data) | Non-production data sources, PII treatment, masking rules, refresh |
+| [9. Infrastructure as code](#9-infrastructure-as-code) | What is codified, and the manual steps that remain as drift risk |
+| [10. Access](#10-access) | Access per environment, approval, review cadence, break-glass |
+| [11. Known issues](#11-known-issues) | Known issues with impact, workaround, remediation, owner |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Environment inventory
 
 | Environment | Purpose | Data | Refresh | Availability target | Access | Cost |

@@ -24,6 +24,21 @@ tags: [incident, operations]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Severity](#1-severity) | Severity ladder with declaration criteria, response, comms, postmortem requirement |
+| [2. Roles](#2-roles) | Incident Commander, Operations Lead, Comms, Scribe — and who holds each |
+| [3. Process](#3-process) | Detect, triage, contain, resolve, recover phases with owners and timeboxes |
+| [4. Communications](#4-communications) | Audience, channel, and cadence per severity |
+| [5. Data integrity incidents](#5-data-integrity-incidents) | Data-integrity incidents: stop propagation, assess extent, correct, notify |
+| [6. Metrics](#6-metrics) | Time to detect, acknowledge, mitigate, resolve — with targets |
+| [7. Postmortem template](#7-postmortem-template) | Blameless postmortem structure, copied per incident |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Severity
 
 | Sev | Definition | Examples | Declare | Response | Comms | Postmortem |

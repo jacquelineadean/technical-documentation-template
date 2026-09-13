@@ -34,6 +34,30 @@ tags: [change, impact]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Change summary](#1-change-summary) | Change, driver, source, and proposed timing |
+| [2. Mechanical traversal](#2-mechanical-traversal) | Documents reached by traversing the dependency graph — the mechanical floor |
+| [3. Component impact](#3-component-impact) | Components affected directly and indirectly, with effort and regression scope |
+| [4. Data impact](#4-data-impact) | New, modified, and retired data elements; migration and historical comparability |
+| [5. Interface impact](#5-interface-impact) | Interfaces affected, breaking changes, notice periods, counterparty lead times |
+| [6. Process and rules impact](#6-process-and-rules-impact) | Processes and business rules affected, with retraining and catalog updates |
+| [7. Batch and scheduling impact](#7-batch-and-scheduling-impact) | Jobs affected, duration and dependency changes, and window slack before and after |
+| [8. Reporting impact](#8-reporting-impact) | Reports, metric comparability, series breaks, and shadow reporting |
+| [9. Non-functional impact](#9-non-functional-impact) | Projected effect on latency, throughput, and other quality attributes |
+| [10. Security, privacy, compliance](#10-security-privacy-compliance) | Classification, personal data, and compliance assessments triggered |
+| [11. Operational impact](#11-operational-impact) | Runbooks, monitoring, alerting, support model, capacity |
+| [12. Reversibility](#12-reversibility) | Whether the change is reversible, and the rollback window |
+| [13. Test scope](#13-test-scope) | Test scope derived from the impact above, not chosen independently |
+| [14. Documents to update](#14-documents-to-update) | Documents to update, and whether before, with, or after release |
+| [15. Risks](#15-risks) | Risks with likelihood, impact, mitigation, owner |
+| [16. Summary](#16-summary) | Overall complexity and the count of elements affected |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Change summary
 
 | | |

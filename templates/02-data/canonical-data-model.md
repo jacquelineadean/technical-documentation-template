@@ -30,6 +30,22 @@ tags: [data, model]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Purpose and adoption](#1-purpose-and-adoption) | What the model is used for, and what it is explicitly not used for |
+| [2. Conceptual model](#2-conceptual-model) | Concepts in business language, with owners and physical realisations |
+| [3. Logical model](#3-logical-model) | Entity definitions, identity criteria, attributes, relationships |
+| [4. Standard types](#4-standard-types) | Shared value types defined once — the usual source of mapping defects |
+| [5. Code sets](#5-code-sets) | Code sets referenced, with authority and registry entry |
+| [6. Mappings](#6-mappings) | Per-system field mappings, with lossy transformations flagged |
+| [7. Model governance](#7-model-governance) | Change process, versioning, compatibility, conformance checking |
+| [8. Known limitations](#8-known-limitations) | Where the model does not fit, with impact and workaround |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Purpose and adoption
 
 | | |

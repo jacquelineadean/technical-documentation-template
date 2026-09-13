@@ -33,6 +33,28 @@ tags: [interface, icd]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Identification](#1-identification) | Interface ID, name, and the interface version distinct from document version |
+| [2. Transport](#2-transport) | Protocol, endpoint, authentication, encryption |
+| [3. Timing and volume](#3-timing-and-volume) | Frequency, schedule with timezone and DST behaviour, trigger, volumes |
+| [4. Payload](#4-payload) | Payload structure and field-level specification |
+| [5. Processing semantics](#5-processing-semantics) | Delivery guarantee, ordering, idempotency, duplicate handling |
+| [6. Interaction](#6-interaction) | Sequence diagrams for the happy path and for error interactions |
+| [7. Validation and errors](#7-validation-and-errors) | Validation levels, error catalog, and rejection handling |
+| [8. Reconciliation](#8-reconciliation) | Control totals and independent reconciliation, with break procedure |
+| [9. Service levels](#9-service-levels) | Availability, transmission deadlines, measurement points, reporting |
+| [10. Monitoring](#10-monitoring) | Signals including the expected transmission that did not arrive |
+| [11. Versioning and change](#11-versioning-and-change) | Versioning scheme, compatibility policy, notice period, parallel running |
+| [12. Testing and certification](#12-testing-and-certification) | Certification scenarios and which are mandatory |
+| [13. Operations](#13-operations) | Runbook, manual resubmission, replay, contacts |
+| [14. Open items](#14-open-items) | Open items with owner and target |
+| [Change log](#change-log) | Document version, date, author, change, corresponding interface version |
+
+---
+
 ## 1. Identification
 
 | | |

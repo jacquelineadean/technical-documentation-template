@@ -44,6 +44,22 @@ tags: [decision]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [Context](#context) | The forces that made the decision hard |
+| [Decision](#decision) | The choice, present tense, and what it means concretely |
+| [Options considered](#options-considered) | At least two genuine alternatives, each with a real case for it |
+| [Consequences](#consequences) | Positive and negative consequences — negatives mandatory |
+| [Implementation notes](#implementation-notes) | Work required, sequencing, migration, affected components |
+| [Compliance and verification](#compliance-and-verification) | How anyone will know in two years whether the decision still holds |
+| [Re-evaluation triggers](#re-evaluation-triggers) | Conditions obliging a revisit, and the action each triggers |
+| [References](#references) | Related ADRs, TAD sections, external sources |
+| [Retrospective ADRs](#retrospective-adrs) | Reconstructing a decision taken long ago whose rationale is still load-bearing |
+
+---
+
 ## Context
 
 > The forces at play. A reader should finish this section feeling the tension that made the

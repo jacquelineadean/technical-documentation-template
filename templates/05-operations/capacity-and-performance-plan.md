@@ -28,6 +28,24 @@ tags: [capacity, performance]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Demand model](#1-demand-model) | Volume drivers projected to +6, +12, and +24 months, with basis and confidence |
+| [2. Current utilisation](#2-current-utilisation) | Resource capacity, peak utilisation, headroom, and where the constraint binds |
+| [3. Batch window capacity](#3-batch-window-capacity) | Elapsed critical-path time against the window — usually the binding constraint |
+| [4. Seasonal and cyclical peaks](#4-seasonal-and-cyclical-peaks) | Seasonal and cyclical peaks, multipliers, and preparation lead times |
+| [5. Performance baselines](#5-performance-baselines) | Percentile baselines per operation, and degradation under load |
+| [6. Constraints and scaling limits](#6-constraints-and-scaling-limits) | Hard and soft scaling limits, remediation, lead time, cost |
+| [7. Growth projection](#7-growth-projection) | Projected resource use against limits, with warning and action triggers |
+| [8. Performance improvement backlog](#8-performance-improvement-backlog) | Improvement opportunities with expected gain, effort, priority |
+| [9. Testing](#9-testing) | Load tests, results, and the fidelity gap against production |
+| [10. Monitoring](#10-monitoring) | Capacity metrics, thresholds, alerts, dashboards |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Demand model
 
 | Driver | Current | +6m | +12m | +24m | Basis | Confidence |

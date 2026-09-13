@@ -31,6 +31,20 @@ tags: [reference-data, code-sets, governance]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Registry](#1-registry) | Seven code sets with volatility, ownership, effective dating, consumers |
+| [2. Code set: `PRD_OPT` (CS-001)](#2-code-set-prd_opt-cs-001) | `PRD_OPT`: values, attributes, change process, consumers |
+| [3. Effective dating](#3-effective-dating) | Which sets support point-in-time lookup, and the 2014-06 reprocessing boundary |
+| [4. External code sets](#4-external-code-sets) | ISO standards in use, their version currency, and manual update processes |
+| [5. Mapping between code sets](#5-mapping-between-code-sets) | Cross-set mappings and unmapped-value handling, including excluded packages |
+| [6. Governance findings ⚠️](#6-governance-findings-) | Findings: no approval gate and no change preview on high-volatility sets |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Registry
 
 | ID | Code set | Purpose | Values | Volatility | Owner | Eff-dated | Change process | Consumers |

@@ -30,6 +30,25 @@ tags: [governance, data]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Scope and mandate](#1-scope-and-mandate) | Systems and data in scope, what is excluded, source of mandate |
+| [2. Objectives](#2-objectives) | Few, measurable objectives with baseline and target |
+| [3. Operating model](#3-operating-model) | Operating model and the roles that staff it |
+| [4. Decision rights](#4-decision-rights) | Who proposes, is consulted, decides, and escalates — with SLAs |
+| [5. Policies](#5-policies) | Policies, each with an owner, enforcement mechanism, and measure |
+| [6. Critical Data Elements (CDEs)](#6-critical-data-elements-cdes) | Designation criteria and the CDE register |
+| [7. Forums](#7-forums) | Forums, cadence, quorum, decision rights, minutes |
+| [8. Processes](#8-processes) | New element, quality issue, and definition change workflows |
+| [9. Compliance measurement](#9-compliance-measurement) | Metrics on definitions, lineage, and ownership coverage |
+| [10. Maturity assessment](#10-maturity-assessment) | Maturity level per dimension, with evidence and gap |
+| [11. Roadmap](#11-roadmap) | Phased plan with deliverables and success criteria |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Scope and mandate
 
 | | |

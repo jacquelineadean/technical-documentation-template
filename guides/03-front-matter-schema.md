@@ -23,6 +23,22 @@ ownership reporting, and — most importantly — **mechanical impact analysis**
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. The block](#1-the-block) | The canonical YAML block |
+| [2. Field reference](#2-field-reference) | Per-field requirement, type, and notes; why `owner` is a role and the dependency graph matters |
+| [3. `doc_type` registry](#3-doc_type-registry) | All document types by layer, with type code and template path |
+| [4. `status` values](#4-status-values) | Status values, meaning, and whether the document can be cited as authority |
+| [5. Versioning](#5-versioning) | Semantic versioning applied to meaning rather than edits |
+| [6. `review_cycle`](#6-review_cycle) | Cadence values, intervals, and the document types each applies to |
+| [7. `classification`](#7-classification) | Classification values, definitions, and sharing scope |
+| [8. `domains` and scope codes](#8-domains-and-scope-codes) | Scope codes used in `doc_id`, and the Meridian registrations |
+| [9. Validation rules in force](#9-validation-rules-in-force) | The FM / LN / MD rule table with severities |
+
+---
+
 ## 1. The block
 
 ```yaml
@@ -319,6 +335,7 @@ repository. The example set used by `examples/meridian/`:
 | MD-02 | H1 matches front-matter `title` (an ADR's `<DOC-ID>: ` prefix is accepted) | warning |
 | MD-03 | No unresolved `TODO`/`TBD` without an owner in an `approved` document | warning |
 | MD-04 | Mermaid labels escape `&`; no commas inside `erDiagram` type declarations | warning |
+| MD-05 | A `## Contents` table is present and links to every `##` section (documents with 3+ sections) | warning |
 
 > **FM-09 does not apply to `review_cycle: on-change` documents.** ADRs, BRDs, impact
 > assessments, and cutover plans are historical records, exempt from calendar review per §6,

@@ -33,6 +33,20 @@ tags: [data, dictionary]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Scope](#1-scope) | Entities covered, physical objects, field coverage ratio |
+| [2. Entity: `<ENTITY_NAME>`](#2-entity-entity_name) | Per-entity field definitions: type, optionality, valid values, semantics |
+| [3. Data quality](#3-data-quality) | Rules per field, dimension, threshold, and known quality issues |
+| [4. Physical profile](#4-physical-profile) | Profiling evidence: cardinality, nulls, ranges, values still in use |
+| [5. Usage](#5-usage) | Who reads and writes each field, and where it appears in interfaces, reports, rules |
+| [6. History](#6-history) | Field changes over time — including meaning changes that break comparability |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Scope
 
 | | |

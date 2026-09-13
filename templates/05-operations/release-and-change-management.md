@@ -28,6 +28,24 @@ tags: [release, change]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Change classes](#1-change-classes) | Change classes with approval, lead time, window, testing, rollback requirement |
+| [2. Process](#2-process) | Stages from request to closure, with owners and exit criteria |
+| [3. Change record](#3-change-record) | The change record and its required fields |
+| [4. Approval](#4-approval) | Approvers per class across technical, business, security, data governance |
+| [5. Windows and freezes](#5-windows-and-freezes) | Permitted windows, change classes allowed, freeze periods and exceptions |
+| [6. Deployment](#6-deployment) | Per-component deployment method, verification, rollback, and the runsheet |
+| [7. Rollback](#7-rollback) | Rollback triggers, decision owner, deadline, and procedure |
+| [8. Verification](#8-verification) | Post-deployment checks, method, expected result, timing |
+| [9. Post-implementation review](#9-post-implementation-review) | Post-implementation review questions |
+| [10. Metrics](#10-metrics) | Change success rate, emergency change share, failed-change rate |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Change classes
 
 | Class | Definition | Approval | Lead time | Window | Testing | Rollback required |

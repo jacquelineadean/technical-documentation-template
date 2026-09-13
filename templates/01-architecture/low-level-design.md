@@ -31,6 +31,26 @@ tags: []
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Scope](#1-scope) | Components, repository paths, parent HLD, boundaries |
+| [2. Module structure](#2-module-structure) | Modules, responsibilities, and dependencies |
+| [3. Interfaces (internal)](#3-interfaces-internal) | Internal operations: signatures, synchrony, pre- and post-conditions |
+| [4. Data design](#4-data-design) | Schema changes in DDL, backfill requirements, index impact |
+| [5. Algorithms and logic](#5-algorithms-and-logic) | Algorithms, decision logic, complexity, worked edge cases |
+| [6. Error handling](#6-error-handling) | Error classes, detection, handling, logging, what the caller sees |
+| [7. Configuration](#7-configuration) | Configuration keys with ranges and hot-reload behaviour; secret references |
+| [8. Observability](#8-observability) | Metrics, log events, traces, and alert thresholds |
+| [9. Performance](#9-performance) | Per-operation volume, percentile targets, resource profile, load-test plan |
+| [10. Security](#10-security) | Authentication, authorisation enforcement points, input handling |
+| [11. Testing](#11-testing) | Test levels, cases, coverage targets |
+| [12. Rollout](#12-rollout) | Feature flags, phased rollout, backout |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Scope
 
 | | |

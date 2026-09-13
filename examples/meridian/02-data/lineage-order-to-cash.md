@@ -33,6 +33,25 @@ tags: [lineage, sox, order-to-cash]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Summary](#1-summary) | Order capture to general ledger, spanning nine hops |
+| [2. Lineage overview](#2-lineage-overview) | Hop diagram, with the H4 → H5 held-line exclusion carrying the greatest risk |
+| [3. Field-level lineage](#3-field-level-lineage) | Per-hop field mappings and transformation logic across all nine hops |
+| [4. Critical Data Element trace](#4-critical-data-element-trace) | `NET_AMT` traced from capture to invoice value |
+| [5. Controls and reconciliation](#5-controls-and-reconciliation) | Per-hop controls with tolerance, owner, and break procedure |
+| [6. Timing and dependencies](#6-timing-and-dependencies) | Hop scheduling, cutoffs, and consequences of missing them |
+| [7. Temporal behaviour](#7-temporal-behaviour) | Late ASNs, period assignment, and why invoices are never restated |
+| [8. Known gaps and issues](#8-known-gaps-and-issues) | Known gaps, including the 9.7% exclusion and the missing daily ASN control |
+| [9. Consumers](#9-consumers) | Vendors, ERP, and warehouse consumers, with contractual notice periods |
+| [10. Retention](#10-retention) | Retention per hop, from 48-hour work tables to 7-year SOX retention |
+| [11. Verification](#11-verification) | How the mappings were checked, by whom, and the result |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Summary
 
 | | |

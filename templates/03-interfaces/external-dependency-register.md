@@ -28,6 +28,23 @@ tags: [dependencies, vendors, risk]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Summary](#1-summary) | Counts by tier, contract status, and failover test coverage |
+| [2. Register](#2-register) | One row per dependency: type, criticality, interfaces, contract, SLA, alternative |
+| [3. Dependency detail](#3-dependency-detail) | Per-dependency detail: what it provides, failure behaviour, contingency |
+| [4. Concentration risk](#4-concentration-risk) | Providers carrying several dependencies, where failure is correlated |
+| [5. Contract and commercial](#5-contract-and-commercial) | Contract terms, expiry, notice deadlines, and renewals due within 12 months |
+| [6. Compliance](#6-compliance) | Data shared, classification, DPAs, processing location, certifications |
+| [7. Performance](#7-performance) | SLA attainment over 12 months, breaches, credits, incident history |
+| [8. Risks](#8-risks) | Risks by category, with mitigation and owner |
+| [9. Manual and non-technical dependencies](#9-manual-and-non-technical-dependencies) | Dependencies with no system integration — found by asking, not scanning |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Summary
 
 | | Count |

@@ -26,6 +26,24 @@ tags: [modernization, strategy]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Case for change](#1-case-for-change) | Drivers with evidence, business impact, and the cost of inaction |
+| [2. Target architecture](#2-target-architecture) | Target architecture and the principles behind it |
+| [3. Gap analysis](#3-gap-analysis) | Current versus target per capability, with effort, value, priority |
+| [4. Approach](#4-approach) | Retain, rehost, replatform, refactor, rebuild, replace — and where each applies |
+| [5. Roadmap](#5-roadmap) | Phases with dependencies, exit criteria, value delivered, reversibility |
+| [6. Slice definition](#6-slice-definition) | One block per slice; each must deliver standalone value |
+| [7. Data migration strategy](#7-data-migration-strategy) | Migration pattern, historical data, reconciliation, cutover |
+| [8. Risks](#8-risks) | Risks with mitigations, plus risks recurring in this class of programme |
+| [9. Success measures](#9-success-measures) | Measures with baseline, target, and measurement method |
+| [10. Decision log](#10-decision-log) | Decisions taken, with dates and ADR references |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Case for change
 
 | Driver | Evidence | Business impact | Urgency |

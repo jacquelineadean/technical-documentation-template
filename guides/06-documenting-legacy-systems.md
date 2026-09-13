@@ -26,6 +26,24 @@ three incompatible architecture diagrams and a month of argument.
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Sequence](#1-sequence) | Eight-phase order of attack with indicative durations |
+| [2. Phase 0 — Frame (1–2 weeks)](#2-phase-0--frame-12-weeks) | System Profile and RACI — purpose, dependants, cost of being wrong |
+| [3. Phase 1 — Vocabulary (2–3 weeks)](#3-phase-1--vocabulary-23-weeks) | Glossary and Domain Map — the highest-leverage and most-skipped phase |
+| [4. Phase 2 — Boundaries (3–4 weeks)](#4-phase-2--boundaries-34-weeks) | Interface Catalog, External Dependency Register, ICDs for the top interfaces |
+| [5. Phase 3 — Behaviour (6–12 weeks, parallel by domain)](#5-phase-3--behaviour-612-weeks-parallel-by-domain) | One domain pack per bounded context; rule-harvesting method |
+| [6. Phase 4 — Structure (4–6 weeks)](#6-phase-4--structure-46-weeks) | TAD, component specifications, batch and scheduling architecture |
+| [7. Phase 5 — Data (6–10 weeks, parallel by domain)](#7-phase-5--data-610-weeks-parallel-by-domain) | Governance charter, dictionary, lineage, and reference data |
+| [8. Phase 6 — Operate (3–4 weeks)](#8-phase-6--operate-34-weeks) | Runbooks, job schedule catalog, monitoring and alerting |
+| [9. Phase 7 — Sustain (continuous)](#9-phase-7--sustain-continuous) | Change coupling, weekly staleness sweep, burning down `🔴 Assumed` |
+| [10. Techniques](#10-techniques) | Archaeology techniques, the five-questions interview, deciding when to stop |
+| [11. Common traps](#11-common-traps) | Trap, why it fails, and what to do instead |
+
+---
+
 ## 1. Sequence
 
 ```mermaid

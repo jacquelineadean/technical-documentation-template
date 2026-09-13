@@ -27,6 +27,25 @@ tags: [batch, scheduling, critical-path]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Overview](#1-overview) | IBM Workload Scheduler 9.5 (EOL 2028-06), 210 nightly jobs, 5 on the critical path |
+| [2. Processing windows](#2-processing-windows) | Pre-load, nightly core, and post-cycle windows against the 03:00 vendor cutoff |
+| [3. Job dependency graph](#3-job-dependency-graph) | Critical path from extract to EDI transmission, with slack |
+| [4. Job register](#4-job-register) | Summary of the jobs referenced here; full detail in the Job Schedule Catalog |
+| [5. Restart, recovery, and re-run semantics](#5-restart-recovery-and-re-run-semantics) | Per-job restart safety, idempotency, and consequence of a double run |
+| [6. Failure handling](#6-failure-handling) | Abend, overrun, and upstream-delay handling with escalation |
+| [7. Data dependencies](#7-data-dependencies) | Reads, writes, locks, and batch/online contention |
+| [8. Scheduling patterns](#8-scheduling-patterns) | Time-, file-, and event-triggered patterns and where each applies |
+| [9. Capacity and growth](#9-capacity-and-growth) | Critical-path p95 against cutoff, projecting a changeover breach in 2027 |
+| [10. Modernization considerations](#10-modernization-considerations) | Which chains are batch for a genuine constraint versus 1996 MIPS economics |
+| [11. Known issues](#11-known-issues) | Standing issues: unversioned scheduler definitions, 23 jobs with no restart procedure |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Overview
 
 | | |

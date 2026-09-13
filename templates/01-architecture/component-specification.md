@@ -26,6 +26,27 @@ tags: []
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Identity](#1-identity) | Name, type, repository, owning team, runtime |
+| [2. Responsibility](#2-responsibility) | Single-sentence responsibility, plus explicit in and out of scope |
+| [3. Provided interfaces](#3-provided-interfaces) | Interfaces offered: consumers, contract, stability |
+| [4. Required interfaces](#4-required-interfaces) | Dependencies with hard/soft classification, timeout, fallback |
+| [5. Data](#5-data) | Stores accessed, ownership, and what the component is authoritative for |
+| [6. Runtime behaviour](#6-runtime-behaviour) | Startup, readiness, concurrency, state, shutdown |
+| [7. Configuration](#7-configuration) | Configuration keys and secret references — names and stores only |
+| [8. Resource profile](#8-resource-profile) | CPU, memory, I/O, connections at idle, normal, peak, and limit |
+| [9. Failure modes](#9-failure-modes) | Failure modes, detection, recovery, and downstream consumer impact |
+| [10. Observability](#10-observability) | Metrics, logs, traces, golden signals, alerts |
+| [11. Security](#11-security) | Runtime identity, network exposure, authentication, authorisation |
+| [12. Change and release](#12-change-and-release) | Release cadence, deployment method, backwards compatibility |
+| [13. Knowledge](#13-knowledge) | Bus factor and how many people can change it safely |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Identity
 
 | | |

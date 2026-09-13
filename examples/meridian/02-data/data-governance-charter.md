@@ -28,6 +28,25 @@ tags: [governance, data, stewardship]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Scope and mandate](#1-scope-and-mandate) | PLR, OPS, and SPR data in scope; ERP and warehouse explicitly excluded |
+| [2. Objectives](#2-objectives) | Five measurable objectives with baseline and current value, including one unmet |
+| [3. Operating model](#3-operating-model) | Operating model, roles, and column-level ownership of contested fields |
+| [4. Decision rights](#4-decision-rights) | Proposer, consulted, decider, escalation, and SLA per decision — with deadlock escalation |
+| [5. Policies](#5-policies) | Eleven policies, each with an enforcement mechanism and measure |
+| [6. Critical Data Elements](#6-critical-data-elements) | Designation criteria and the CDE register |
+| [7. Forums](#7-forums) | Council and steward forums with quorum and decision rights |
+| [8. Processes](#8-processes) | Data quality issue and definition change workflows |
+| [9. Compliance measurement](#9-compliance-measurement) | Metrics on ownership, definition, and lineage coverage over three years |
+| [10. Maturity assessment](#10-maturity-assessment) | Maturity by dimension, 2024 against 2026, with evidence |
+| [11. Roadmap](#11-roadmap) | Phased plan with deliverables and success criteria |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Scope and mandate
 
 | | |

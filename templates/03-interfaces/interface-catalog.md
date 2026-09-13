@@ -29,6 +29,24 @@ tags: [interfaces, catalog]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Summary](#1-summary) | Counts by direction, type, criticality, and documentation coverage |
+| [2. Catalog](#2-catalog) | One row per interface: counterparty, pattern, transport, volume, owners, status |
+| [3. By counterparty](#3-by-counterparty) | Interfaces grouped by counterparty, with relationship owner and notice period |
+| [4. By domain](#4-by-domain) | Inbound and outbound counts per domain, with tier-1 concentration |
+| [5. Data crossing the boundary](#5-data-crossing-the-boundary) | Entities, CDEs, classification, and personal data crossing each boundary |
+| [6. Timing map](#6-timing-map) | Windows, cutoffs, dependencies, and slack across interfaces |
+| [7. Manual interfaces ⚠️](#7-manual-interfaces-) | Interfaces with a human step — invisible to automated discovery |
+| [8. Undocumented and discovered interfaces](#8-undocumented-and-discovered-interfaces) | Interfaces found during discovery but not yet assessed |
+| [9. Deprecated and retired](#9-deprecated-and-retired) | Deprecated interfaces, retirement dates, and consumers still to migrate |
+| [10. Gaps](#10-gaps) | Missing ICDs, owners, monitoring, or reconciliation, with remediation |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Summary
 
 | | Count |

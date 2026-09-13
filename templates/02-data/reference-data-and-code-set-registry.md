@@ -32,6 +32,20 @@ tags: [reference-data, code-sets]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Registry](#1-registry) | Code set register with volatility, owner, effective dating, consumers |
+| [2. Code set: `<CODE_SET_NAME>`](#2-code-set-code_set_name) | Per-set detail: values, physical location, change process, consumers |
+| [3. Effective dating](#3-effective-dating) | Whether historical processing is reproducible under past rules |
+| [4. External code sets](#4-external-code-sets) | External standards in use, version currency, and local extensions |
+| [5. Mapping between code sets](#5-mapping-between-code-sets) | Cross-set mappings, cardinality, and unmapped-value handling |
+| [6. Governance findings](#6-governance-findings) | Findings with risk and remediation, plus the checks that produce them |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Registry
 
 | ID | Code set | Purpose | Values | Volatility | Owner | Effective-dated | Change process | Consumers |

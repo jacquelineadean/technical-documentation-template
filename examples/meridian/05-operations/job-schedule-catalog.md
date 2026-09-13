@@ -30,6 +30,25 @@ tags: [batch, operations, scheduling]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Summary](#1-summary) | 210 nightly jobs on IBM Workload Scheduler 9.5, EOL 2028-06 |
+| [2. Nightly core chain](#2-nightly-core-chain) | The five critical-path jobs with timings, triggers, restart safety, runbook |
+| [3. Dependency graph](#3-dependency-graph) | Dependency graph: p95 3h11m against a 03:00 UTC cutoff |
+| [4. Job detail — the constraint](#4-job-detail--the-constraint) | `ORD-DECODE-020` — the throughput constraint of the entire chain |
+| [5. Restart semantics — all critical jobs](#5-restart-semantics--all-critical-jobs) | Per-job restart point, idempotency, cleanup, and consequence of a double run |
+| [6. Jobs that must never be blindly re-run](#6-jobs-that-must-never-be-blindly-re-run) | Jobs where a blind re-run transmits to vendors or posts to the ledger |
+| [7. Special schedules](#7-special-schedules) | Weekly, month-end, and quarter-end schedules against `MERIDIAN.CALENDAR` |
+| [8. Jobs with no documented restart procedure ⚠️](#8-jobs-with-no-documented-restart-procedure-) | Twenty-three jobs whose recovery depends on two individuals' knowledge |
+| [9. Manual interventions](#9-manual-interventions) | Recurring manual steps, including an annual capacity change nobody automated |
+| [10. Performance history](#10-performance-history) | Duration trends, failure counts, and jobs approaching their window |
+| [11. Retired jobs](#11-retired-jobs) | Retired jobs and whether the definition was removed from the scheduler |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Summary
 
 | | |

@@ -20,6 +20,24 @@ cannot drift into a shared drive nobody can find.
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Choosing a diagram type](#1-choosing-a-diagram-type) | Reader's question → diagram type mapping |
+| [2. The standard palette](#2-the-standard-palette) | Six `classDef` styles with explicit `color:` for light and dark themes |
+| [3. C4-style architecture diagrams](#3-c4-style-architecture-diagrams) | C4 Levels 1–3 as `flowchart` with `subgraph` boundaries, not `C4Context` |
+| [4. Swimlane process flows](#4-swimlane-process-flows) | Per-actor subgraphs, left-to-right, unhappy path mandatory |
+| [5. Sequence diagrams](#5-sequence-diagrams) | Required for every ICD: happy path, error path, timeouts, acknowledgements |
+| [6. State diagrams](#6-state-diagrams) | One per lifecycle-bearing entity; terminal states and rule-ID transition labels |
+| [7. Entity relationship diagrams](#7-entity-relationship-diagrams) | Scoped to one domain, never the whole schema |
+| [8. Lineage diagrams](#8-lineage-diagrams) | One node per hop, transformation on the edge, `H1..Hn` shared with the prose table |
+| [9. Job dependency graphs](#9-job-dependency-graphs) | Batch dependency graph with the critical path marked by thick links |
+| [10. Timelines and plans](#10-timelines-and-plans) | `gantt` for plans and cutover runsheets; `timeline` for system history |
+| [11. Rules that apply to every diagram](#11-rules-that-apply-to-every-diagram) | Universal constraints: captions, ≤ 15 nodes, labelled edges, `&` escaping |
+
+---
+
 ## 1. Choosing a diagram type
 
 ```mermaid

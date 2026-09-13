@@ -29,6 +29,20 @@ tags: []
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Capability map](#1-capability-map) | Capability hierarchy diagram |
+| [2. Capability register](#2-capability-register) | One row per capability: owning domain, components, criticality, maturity, disposition |
+| [3. Capability → component mapping](#3-capability--component-mapping) | Which components implement which capabilities, and what is entangled |
+| [4. Capability heat map](#4-capability-heat-map) | Criticality against maturity, scored and prioritised |
+| [5. Cross-domain capabilities](#5-cross-domain-capabilities) | Capabilities used by more than one domain, with a named accountable owner |
+| [6. Gaps and duplication](#6-gaps-and-duplication) | Gaps, duplication, and shadow IT, with evidence and owner |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Capability map
 
 ```mermaid

@@ -25,6 +25,21 @@ tags: [ownership]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Role register](#1-role-register) | Role → holder, deputy, channel, escalation; vacant and contested roles |
+| [2. Stakeholder map](#2-stakeholder-map) | Stakeholder map with interest and influence |
+| [3. RACI — system activities](#3-raci--system-activities) | R/A/C/I per system activity, exactly one Accountable per row |
+| [4. RACI — documentation](#4-raci--documentation) | Author, reviewer, approver, and informed parties per document type |
+| [5. Decision rights for contested areas](#5-decision-rights-for-contested-areas) | Decision rights where accountability is genuinely ambiguous |
+| [6. Communication and forums](#6-communication-and-forums) | Forums, cadence, decision rights, and event communication plans |
+| [7. External stakeholders](#7-external-stakeholders) | External parties, contacts, notice periods, criticality |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Role register
 
 > The indirection that keeps the rest of the corpus stable when people change jobs.

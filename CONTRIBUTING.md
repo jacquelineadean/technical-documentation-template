@@ -1,5 +1,21 @@
 # Contributing
 
+---
+
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [Three kinds of contribution](#three-kinds-of-contribution) | Documents, templates, worked example — review required for each |
+| [Before you open a pull request](#before-you-open-a-pull-request) | Validator and catalog commands to run locally |
+| [Contributing a document](#contributing-a-document) | Copy a template, complete front matter, declare the dependency graph |
+| [Contributing a template change](#contributing-a-template-change) | Problem statement, blast radius across existing documents, migration note |
+| [Contributing to the worked example](#contributing-to-the-worked-example) | Internal-consistency requirement across cross-referenced IDs, jobs, tables, figures |
+| [Style](#style) | Present tense, numbers over adjectives, link over copy, `—` versus `🔴 Unknown` |
+| [Review posture](#review-posture) | Four reviewer checks, in precedence order |
+
+---
+
 ## Three kinds of contribution
 
 | Kind | What it is | Review needed |
@@ -116,6 +132,7 @@ The points that come up most in review:
 - `—` for "none"; `🔴 Unknown` for "not known". A blank cell is ambiguous between them.
 - Owners are roles, not people.
 - Diagrams support prose; they never carry a fact alone.
+- Every document opens with a `## Contents` table; update it when you add a section.
 
 ---
 

@@ -32,6 +32,25 @@ tags: [lineage, incentive, restatement, derived-metric]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Summary](#1-summary) | Objectives to settlement — approximately USD 41M of quarterly dealer incentive |
+| [2. Lineage overview](#2-lineage-overview) | Hop diagram: value is derived, not carried |
+| [3. Field-level lineage](#3-field-level-lineage) | Per-hop field mappings, including the eligibility exclusion set |
+| [4. Critical Data Element trace](#4-critical-data-element-trace) | `PAYOUT_AMT` traced from invoiced volume to payment instruction |
+| [5. Controls and reconciliation](#5-controls-and-reconciliation) | Per-hop controls with tolerance, owner, and break procedure |
+| [6. Timing](#6-timing) | Objective load, nightly eligibility, period close, and payout timing |
+| [7. Temporal behaviour ⚠️](#7-temporal-behaviour-) | Restatement, retroactive adjustment, and the late-ASN tier problem |
+| [8. Known gaps and issues](#8-known-gaps-and-issues) | Known gaps, including H5 not being reproducible for 41 of 200 sampled dealers |
+| [9. Consumers](#9-consumers) | Settlement bank and ERP AP consumers, with notice periods |
+| [10. Retention](#10-retention) | Retention per hop under franchise regulation and SOX |
+| [11. Verification](#11-verification) | Reproducibility test results, including the failures |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Summary
 
 | | |

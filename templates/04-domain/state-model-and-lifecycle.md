@@ -30,6 +30,25 @@ tags: [state, lifecycle]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Entity](#1-entity) | Entity, the field holding state, and its physical representation |
+| [2. State diagram](#2-state-diagram) | State diagram with event and rule ID on every transition |
+| [3. States](#3-states) | States with entry condition, typical duration, exit states, terminal flag, volume |
+| [4. Transitions](#4-transitions) | Transitions with trigger, actor, guards, rule, side effects, reversibility |
+| [5. Transition matrix](#5-transition-matrix) | Legal transitions as a grid — exposes unreachable and inescapable states |
+| [6. Concurrent and composite state](#6-concurrent-and-composite-state) | Entities carrying more than one state dimension simultaneously |
+| [7. Parent/child state](#7-parentchild-state) | Where parent state derives from or constrains child state |
+| [8. Timing and ageing](#8-timing-and-ageing) | Target durations, ageing thresholds, escalation, and current ageing |
+| [9. Reversals and corrections](#9-reversals-and-corrections) | Reversals, forced state changes, approval, audit, downstream effect |
+| [10. History](#10-history) | State history retention and where it is held |
+| [11. Reporting](#11-reporting) | How states appear in reports, and whether point-in-time state is reconstructable |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Entity
 
 | | |

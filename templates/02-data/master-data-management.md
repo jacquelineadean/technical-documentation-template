@@ -28,6 +28,24 @@ tags: [mdm, master-data]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Entity](#1-entity) | Master entity, business definition, identity criterion |
+| [2. Source landscape](#2-source-landscape) | Contributing sources, what each is authoritative for, sync and latency |
+| [3. Identity and matching](#3-identity-and-matching) | Master identifier, matching algorithm, thresholds, manual review |
+| [4. Survivorship](#4-survivorship) | Per-attribute survivorship rules and their rationale |
+| [5. Golden record](#5-golden-record) | Golden record attributes, with per-attribute source lineage |
+| [6. Lifecycle](#6-lifecycle) | States, who may change them, and downstream effects of deactivation |
+| [7. Stewardship](#7-stewardship) | Stewardship tasks, triggers, SLAs, monthly volumes |
+| [8. Distribution](#8-distribution) | Distribution to consumers, and behaviour on an unknown identifier |
+| [9. Quality](#9-quality) | Duplicate rate, match precision and recall, completeness |
+| [10. Known issues](#10-known-issues) | Known issues with impact, workaround, remediation |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Entity
 
 | | |

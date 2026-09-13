@@ -29,6 +29,20 @@ tags: [data-quality, issues]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Summary](#1-summary) | Open and closed counts by severity |
+| [2. Open issues](#2-open-issues) | Open issues with element, severity, extent, consumers affected, owner, target |
+| [3. Issue detail](#3-issue-detail) | Per-issue detail: detection, root cause, containment, remediation, prevention |
+| [4. Closed issues](#4-closed-issues) | Closed issues, retained permanently because historical data keeps the consequences |
+| [5. Recurring issues](#5-recurring-issues) | Repeating patterns, systemic cause, structural fix |
+| [6. Analysis](#6-analysis) | Breakdown by root cause category and by domain, with trend |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Summary
 
 | | Count |

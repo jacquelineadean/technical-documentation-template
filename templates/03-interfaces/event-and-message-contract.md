@@ -26,6 +26,24 @@ tags: [event, message, async]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Identification](#1-identification) | Event name, interface ID, schema version, topic |
+| [2. Trigger](#2-trigger) | What publishes the event, and its timing relative to the state change |
+| [3. Schema](#3-schema) | Format, registry, field-level schema, required fields |
+| [4. Keys and ordering](#4-keys-and-ordering) | Partition key, ordering guarantee, and the scope it holds within |
+| [5. Delivery semantics](#5-delivery-semantics) | At-most-once versus at-least-once, duplicates, idempotency key |
+| [6. Retention and replay](#6-retention-and-replay) | Retention period, replay support, and the replay mechanism |
+| [7. Consumers](#7-consumers) | Consumers, fields used, lag tolerance, and their obligations |
+| [8. Error handling](#8-error-handling) | Producer and consumer behaviour per failure, including poison messages |
+| [9. Monitoring](#9-monitoring) | Publish rate, failures, consumer lag, dead-letter depth |
+| [10. Versioning](#10-versioning) | Versioning scheme, compatibility mode, migration path |
+| [Change log](#change-log) | Version, date, author, change, breaking flag |
+
+---
+
 ## 1. Identification
 
 | | |

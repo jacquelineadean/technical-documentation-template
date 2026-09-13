@@ -15,6 +15,16 @@ in the [repository README](../README.md#template-index).
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [How to use a template](#how-to-use-a-template) | Copy, front matter first, strip guidance, mark skipped sections, keep Contents in step |
+| [Validation in relaxed mode](#validation-in-relaxed-mode) | Placeholders tolerated; structure, links, and Mermaid still enforced |
+| [Seeing a template filled in](#seeing-a-template-filled-in) | Template → worked example pairs, and why some templates have none |
+
+---
+
 ## How to use a template
 
 1. **Copy it.** Never edit a file here to produce a document — improvements to a template are
@@ -27,7 +37,9 @@ in the [repository README](../README.md#template-index).
    each section. Remove them as you go.
 4. **Mark skipped sections** as `Not applicable — <reason>`. An empty section is ambiguous
    between "nothing to say" and "not finished".
-5. **Tag claims about existing behaviour** with `✅ Verified` / `🟡 Inferred` / `🔴 Assumed`
+5. **Keep the `## Contents` table in step.** Delete the rows for sections you remove, add
+   rows for sections you add. `MD-05` fails a table that has fallen behind its document.
+6. **Tag claims about existing behaviour** with `✅ Verified` / `🟡 Inferred` / `🔴 Assumed`
    and the evidence. See
    [documentation standards §3](../guides/01-documentation-standards.md#3-confidence-levels).
 

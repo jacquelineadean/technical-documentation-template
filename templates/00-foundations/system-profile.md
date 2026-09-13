@@ -30,6 +30,25 @@ tags: []
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. At a glance](#1-at-a-glance) | Identity block: name, short code, owner, lifecycle status |
+| [2. Criticality and business impact](#2-criticality-and-business-impact) | Consequence of failure by outage duration, with financial exposure |
+| [3. Context](#3-context) | Context diagram and the conclusion the reader should draw |
+| [4. What it does](#4-what-it-does) | Capabilities with domain, volume, and criticality |
+| [5. Users and stakeholders](#5-users-and-stakeholders) | User groups, size, interaction mode, peak usage pattern |
+| [6. Scale](#6-scale) | Volumetrics: normal, peak, peak driver, growth trend |
+| [7. Technology summary](#7-technology-summary) | Technology per layer, with version and support status |
+| [8. Architectural eras](#8-architectural-eras) | Chronology of architectural eras and what each left behind |
+| [9. Known characteristics](#9-known-characteristics) | Load-bearing characteristics with impact and confidence level |
+| [10. Document map](#10-document-map) | Which documents exist for this system, by layer, with status |
+| [11. Open questions](#11-open-questions) | Open questions with owner and target date |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. At a glance
 
 | Attribute | Value |

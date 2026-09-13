@@ -32,6 +32,24 @@ tags: [data-contract]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Parties](#1-parties) | Producer, consumer, accountable roles, signatures |
+| [2. Dataset](#2-dataset) | Dataset name, grain, volume, classification |
+| [3. Schema](#3-schema) | Field-level schema with types, optionality, valid values, CDE flags |
+| [4. Quality guarantees](#4-quality-guarantees) | Per-dimension quality guarantees, measurement, breach notification |
+| [5. Availability and delivery](#5-availability-and-delivery) | Schedule, delivery deadline, transport, availability commitment |
+| [6. Semantics of change](#6-semantics-of-change) | Breaking versus non-breaking change classes, notice periods, consent |
+| [7. Consumer obligations](#7-consumer-obligations) | Permitted use, onward sharing, and consumer-side obligations |
+| [8. Monitoring and reporting](#8-monitoring-and-reporting) | Metrics published against the contract, with thresholds |
+| [9. Incident handling](#9-incident-handling) | Missed, late, and defective delivery: actions and target resolution |
+| [10. Dispute resolution](#10-dispute-resolution) | Escalation path from stewards to owners, with timeframes |
+| [11. Change log](#11-change-log) | Contract version, change class, notice given, approver |
+
+---
+
 ## 1. Parties
 
 | Role | Party | Accountable role | Contact | Signed |

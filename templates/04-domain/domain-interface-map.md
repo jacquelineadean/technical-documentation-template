@@ -31,6 +31,23 @@ tags: [interfaces, domain]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Map](#1-map) | Diagram of everything the domain sends and receives |
+| [2. Inbound](#2-inbound) | Inbound interfaces, what depends on them, behaviour if unavailable |
+| [3. Outbound](#3-outbound) | Outbound interfaces, consumer commitments, delivery margin |
+| [4. Interfaces by process step](#4-interfaces-by-process-step) | Which interface failing would stop which process step |
+| [5. Data crossing the boundary](#5-data-crossing-the-boundary) | Entities, CDEs, classification, and personal data crossing the boundary |
+| [6. Timing](#6-timing) | Expected times, deadlines, slack, and the critical chain |
+| [7. Failure impact](#7-failure-impact) | Per-interface failure, detection time, business impact, workaround |
+| [8. Manual interfaces](#8-manual-interfaces) | Human-mediated interfaces with effort and risk |
+| [9. Catalog reconciliation](#9-catalog-reconciliation) | Checks that this map and the Interface Catalog agree |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Map
 
 ```mermaid

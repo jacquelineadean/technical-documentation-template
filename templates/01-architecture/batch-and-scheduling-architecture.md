@@ -30,6 +30,25 @@ tags: [batch, scheduling]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Overview](#1-overview) | Scheduler product, job counts, critical-path size |
+| [2. Processing windows](#2-processing-windows) | Windows, hard cutoffs, cutoff driver, consequence of breach |
+| [3. Job dependency graph](#3-job-dependency-graph) | Dependency graph with the critical path, its duration, and slack |
+| [4. Job register](#4-job-register) | Per-job summary: trigger, duration, predecessors, successors, criticality |
+| [5. Restart, recovery, and re-run semantics](#5-restart-recovery-and-re-run-semantics) | Per-job re-run safety: restart point, idempotency, consequence of double-run |
+| [6. Failure handling](#6-failure-handling) | Abend, overrun, and upstream-delay handling with escalation |
+| [7. Data dependencies](#7-data-dependencies) | Reads, writes, locks, concurrency safety, online/batch contention |
+| [8. Scheduling patterns](#8-scheduling-patterns) | Time-, file-, and event-triggered patterns and where each is used |
+| [9. Capacity and growth](#9-capacity-and-growth) | Critical-path duration and volume against 12-month projections |
+| [10. Modernization considerations](#10-modernization-considerations) | Which chains are batch for a real constraint versus historical reasons |
+| [11. Known issues](#11-known-issues) | Known issues with impact, frequency, workaround, remediation |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Overview
 
 | | |

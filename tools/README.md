@@ -9,6 +9,17 @@ Two standard-library Python scripts. No dependencies, no install step, Python 3.
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [`validate_docs.py`](#validate_docspy) | Invocation, exit codes, scoped runs, rule table, relaxed mode, exempt files, impact graph |
+| [`build_catalog.py`](#build_catalogpy) | Catalog generation, `--check` in CI, date-insensitive comparison |
+| [Extending the validator](#extending-the-validator) | Adding a document type or a rule, and the three places to keep in agreement |
+| [Why no third-party linters?](#why-no-third-party-linters) | Rationale: repo-specific conventions, no `npm install` dependency |
+
+---
+
 ## `validate_docs.py`
 
 ```bash
@@ -61,6 +72,7 @@ directory; outside a repository the tool falls back to the target itself.
 | MD-02 | warning | H1 matches front-matter `title`; an ADR's `<DOC-ID>: ` prefix is accepted |
 | MD-03 | warning | No unresolved TODO/TBD/FIXME in an `approved` document (mentions inside backticks or quotes are ignored) |
 | MD-04 | warning | Mermaid labels escape `&`; no commas inside `erDiagram` type declarations |
+| MD-05 | warning | A `## Contents` table is present and links to every `##` section; skipped below 3 sections |
 
 Full definitions: [`guides/03-front-matter-schema.md`](../guides/03-front-matter-schema.md).
 

@@ -28,6 +28,23 @@ tags: [security, privacy]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Security posture](#1-security-posture) | Highest classification handled, regulatory scope, last assessment |
+| [2. Trust boundaries](#2-trust-boundaries) | Boundary diagram with controls and gaps at each crossing |
+| [3. Identity and access](#3-identity-and-access) | Identity types, authentication, authorisation model, privileged access |
+| [4. Data protection](#4-data-protection) | Protection at rest, in transit, in use, and in non-production; key management |
+| [5. Privacy](#5-privacy) | Personal data processed, lawful basis, subject rights, minimisation |
+| [6. Threat model](#6-threat-model) | System-specific threats with STRIDE classification and residual risk |
+| [7. Controls](#7-controls) | Preventive, detective, and corrective controls; audit logging |
+| [8. Findings and debt](#8-findings-and-debt) | Open findings with compensating controls, plus formally accepted risks |
+| [9. Incident response](#9-incident-response) | Security scenarios: detection, immediate action, notification, owner |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Security posture
 
 | | |

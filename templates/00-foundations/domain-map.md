@@ -29,6 +29,21 @@ tags: []
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Domains](#1-domains) | Domain, code, purpose, business and technical owner, entities owned |
+| [2. Domain map](#2-domain-map) | Context diagram with a typed relationship on every edge |
+| [3. Context boundaries and translation](#3-context-boundaries-and-translation) | Translation rules for terms whose meaning changes at a boundary |
+| [4. Shared data](#4-shared-data) | Shared entities: writers, readers, coupling risk, cross-domain write violations |
+| [5. Domain interaction sequence](#5-domain-interaction-sequence) | One end-to-end scenario showing where ownership changes hands |
+| [6. Domain boundary health](#6-domain-boundary-health) | Symptoms of a bad boundary, tested per domain pair |
+| [7. Domain pack index](#7-domain-pack-index) | Links to the six domain-pack documents per domain |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Domains
 
 | Domain | Code | Purpose | Business owner | Technical owner | Core entities owned |

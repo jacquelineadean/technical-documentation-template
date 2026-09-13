@@ -22,6 +22,27 @@ tags: [legacy, order-to-cash, cobol, db2]
 
 # Meridian — System Profile
 
+---
+
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. At a glance](#1-at-a-glance) | Identity, short code `MER`, owner, lifecycle status |
+| [2. Criticality and business impact](#2-criticality-and-business-impact) | Business consequence and financial exposure by outage duration |
+| [3. Context](#3-context) | Context between 3,200 dealers and 43 fulfilment vendors |
+| [4. What it does](#4-what-it-does) | Nine capabilities across the three domains, with volumes and criticality |
+| [5. Users and stakeholders](#5-users-and-stakeholders) | Dealer administrators, field sales, operations, finance — and their peak patterns |
+| [6. Scale](#6-scale) | Order and line volumes, normal against peak, with growth trend |
+| [7. Technology summary](#7-technology-summary) | Technology per layer, from CICS green screen to WebSphere, with support status |
+| [8. Architectural eras](#8-architectural-eras) | Four architectural eras and what each left behind |
+| [9. Known characteristics](#9-known-characteristics) | Load-bearing characteristics with confidence and evidence |
+| [10. Document map](#10-document-map) | Which Meridian documents exist, by layer, with status |
+| [11. Open questions](#11-open-questions) | Open questions with owner and target date |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. At a glance
 
 | Attribute | Value |

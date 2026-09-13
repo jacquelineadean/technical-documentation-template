@@ -26,6 +26,26 @@ tags: [resilience, fmea]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Method](#1-method) | FMEA scoring: severity, occurrence, detection, and RPN |
+| [2. Failure mode register](#2-failure-mode-register) | One row per failure mode with cause, effect, scores, mitigation, owner |
+| [3. Failure categories to cover](#3-failure-categories-to-cover) | Availability, data, processing, capacity, and dependency categories to work through |
+| [4. Silent failure analysis](#4-silent-failure-analysis) | Ways the system produces a wrong answer without erroring, and time to notice |
+| [5. Blast radius](#5-blast-radius) | Impact propagation, business processes stopped, external parties affected |
+| [6. Single points of failure](#6-single-points-of-failure) | Component, data, vendor, knowledge, and person SPOFs, with acceptance |
+| [7. Resilience patterns in use](#7-resilience-patterns-in-use) | Retry, circuit breaker, bulkhead, fallback — where used and whether tested |
+| [8. Degraded modes](#8-degraded-modes) | Degraded modes, entry and exit decisions, and backlog recovery capability |
+| [9. Detection and alerting coverage](#9-detection-and-alerting-coverage) | Alert coverage per failure mode, with detection time and gaps |
+| [10. Failure injection and testing](#10-failure-injection-and-testing) | Failure injection tests, results, and untested assumptions |
+| [11. Incident history](#11-incident-history) | Real incidents mapped to failure modes, with detection time and root cause |
+| [12. Improvement backlog](#12-improvement-backlog) | Improvements with RPN reduction, effort, priority, owner, target |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Method
 
 Each failure mode is scored:

@@ -40,24 +40,29 @@ tags: []
 
 ## Contents
 
-1. [Scope and audience](#1-scope-and-audience)
-2. [Architectural drivers](#2-architectural-drivers)
-3. [Architecture principles and constraints](#3-architecture-principles-and-constraints)
-4. [Context — C4 Level 1](#4-context--c4-level-1)
-5. [Container view — C4 Level 2](#5-container-view--c4-level-2)
-6. [Component views — C4 Level 3](#6-component-views--c4-level-3)
-7. [Runtime views](#7-runtime-views)
-8. [Data architecture](#8-data-architecture)
-9. [Integration architecture](#9-integration-architecture)
-10. [Batch and scheduling architecture](#10-batch-and-scheduling-architecture)
-11. [Cross-cutting concerns](#11-cross-cutting-concerns)
-12. [Non-functional requirements](#12-non-functional-requirements)
-13. [Failure modes and resilience](#13-failure-modes-and-resilience)
-14. [Deployment and environments](#14-deployment-and-environments)
-15. [Security architecture](#15-security-architecture)
-16. [Architecture decisions](#16-architecture-decisions)
-17. [Technical debt and known weaknesses](#17-technical-debt-and-known-weaknesses)
-18. [Evolution and open questions](#18-evolution-and-open-questions)
+| Section | Summary |
+| --- | --- |
+| [1. Scope and audience](#1-scope-and-audience) | What the document covers, what it deliberately excludes, and who reads it |
+| [2. Architectural drivers](#2-architectural-drivers) | The forces shaping the architecture, including historical ones |
+| [3. Architecture principles and constraints](#3-architecture-principles-and-constraints) | Principles with compliance status; constraints that cannot be traded away |
+| [4. Context — C4 Level 1](#4-context--c4-level-1) | System context: external actors and system boundary |
+| [5. Container view — C4 Level 2](#5-container-view--c4-level-2) | Containers with responsibility, technology, owning team, criticality |
+| [6. Component views — C4 Level 3](#6-component-views--c4-level-3) | Internal structure of containers whose internals are architecturally significant |
+| [7. Runtime views](#7-runtime-views) | Two or three end-to-end scenarios, including at least one failure path |
+| [8. Data architecture](#8-data-architecture) | Stores, ownership, and volumes; meaning and lineage live in Layer 2 |
+| [9. Integration architecture](#9-integration-architecture) | Patterns in use, middleware, and the interface inventory summary |
+| [10. Batch and scheduling architecture](#10-batch-and-scheduling-architecture) | Job graph summary and the business sequencing it encodes |
+| [11. Cross-cutting concerns](#11-cross-cutting-concerns) | Authentication, authorisation, logging, error handling, configuration — and their gaps |
+| [12. Non-functional requirements](#12-non-functional-requirements) | Budget summary with numbers and measurement methods, not adjectives |
+| [13. Failure modes and resilience](#13-failure-modes-and-resilience) | Failure summary with detection, time to detect, response, residual risk |
+| [14. Deployment and environments](#14-deployment-and-environments) | Environment summary, parity, and deployment topology |
+| [15. Security architecture](#15-security-architecture) | Trust boundaries, controls, and data protection summary |
+| [16. Architecture decisions](#16-architecture-decisions) | ADR register with validity, plus decisions that still lack an ADR |
+| [17. Technical debt and known weaknesses](#17-technical-debt-and-known-weaknesses) | Debt register grounded in incident history, with remediation and priority |
+| [18. Evolution and open questions](#18-evolution-and-open-questions) | Known upcoming change and unresolved questions |
+| [Appendix A — Confidence summary](#appendix-a--confidence-summary) | Verified, inferred, and assumed counts per section |
+| [Appendix B — References](#appendix-b--references) | Source documents, code locations, and external standards |
+| [Change log](#change-log) | Version, date, author, change, approver |
 
 ---
 

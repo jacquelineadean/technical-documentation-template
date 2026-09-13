@@ -32,6 +32,24 @@ tags: [data-contract, vendor, asn, edi]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Parties](#1-parties) | 43 fulfilment vendors as producer, Order Processing as consumer — 38 of 43 signed |
+| [2. Dataset](#2-dataset) | Advance Shipping Notice, and the split-shipment grain |
+| [3. Schema and semantics](#3-schema-and-semantics) | EDI 856 field mapping, with the `ship_date` ambiguity called out |
+| [4. Quality guarantees](#4-quality-guarantees) | Timeliness, completeness, and accuracy guarantees with measurement |
+| [5. Availability and delivery](#5-availability-and-delivery) | Event-driven delivery within 4 hours of carrier handover |
+| [6. Semantics of change](#6-semantics-of-change) | Breaking versus non-breaking classes, with 30- and 90-day notice |
+| [7. Consumer obligations](#7-consumer-obligations) | Permitted use, and the prohibition on sharing one vendor's data with another |
+| [8. Monitoring](#8-monitoring) | Timeliness and unmatched-dispatch metrics published to the vendor scorecard |
+| [9. Incident handling](#9-incident-handling) | Missed, late, and malformed transmissions: actions and target resolution |
+| [10. Dispute resolution](#10-dispute-resolution) | Two-step escalation from data contacts to VP Order Operations |
+| [11. Change log](#11-change-log) | Contract version, change class, notice given, approver |
+
+---
+
 ## 1. Parties
 
 | Role | Party | Accountable role | Signed |

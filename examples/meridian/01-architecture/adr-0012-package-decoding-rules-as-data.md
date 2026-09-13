@@ -38,6 +38,22 @@ tags: [decision, retrospective, reference-data]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [Context 🟡 *Inferred*](#context--inferred) | Copybook constants and the 17-program recompile, reconstructed from the 2003 analysis |
+| [Decision](#decision) | Package composition held as effective-dated reference data, read at decode time |
+| [Options considered 🔴 *Assumed*](#options-considered--assumed) | Alternatives reconstructed as inference — explicitly not citable as history |
+| [Consequences](#consequences) | Changeover in days rather than weeks, against the observed negative consequences |
+| [Subsequent amendment — effective dating (2014-06) ✅ *Verified*](#subsequent-amendment--effective-dating-2014-06--verified) | The 2014 change that added effective dating, and why pre-2014 history is not reproducible |
+| [Compliance and verification](#compliance-and-verification) | Re-decode comparison and code review proving the decision still holds |
+| [Re-evaluation triggers](#re-evaluation-triggers) | Two of three original constraints have lapsed, so the decision is genuinely re-openable |
+| [References](#references) | Surviving source documents, and which did not survive |
+| [Change log](#change-log) | Version, date, change |
+
+---
+
 ## Context 🟡 *Inferred*
 
 Before the 2003 DB2 migration, package composition was held in COBOL COPYBOOK constants.
