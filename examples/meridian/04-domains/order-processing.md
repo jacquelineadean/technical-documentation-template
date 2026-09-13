@@ -29,6 +29,24 @@ tags: [domain, order-processing]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Scope](#1-scope) | Domain `OPS` — turning a dealer order into shipped, invoiced goods |
+| [2. Business context](#2-business-context) | Volumes, financial throughput, and what stops if the domain stops |
+| [3. Capabilities](#3-capabilities) | Capture, decoding, holds, dispatch, invoicing, reimbursement |
+| [4. Actors](#4-actors) | Dealer administrators, field sales, operations, vendors, scheduled jobs |
+| [5. Core concepts](#5-core-concepts) | Domain vocabulary, linked to the glossary and to physical entities |
+| [6. Order line state model](#6-order-line-state-model) | Order line states, with holds modelled as a separate dimension |
+| [7. Process flow](#7-process-flow) | End-to-end flow, with an 88.5% straight-through rate falling to 79% at changeover |
+| [8. Business rules — summary](#8-business-rules--summary) | 214 rules catalogued of an estimated 260, with implementation mechanism |
+| [9. Interfaces](#9-interfaces) | Interfaces the domain depends on, and behaviour when each is unavailable |
+| [10. Known pain points](#10-known-pain-points) | Changeover decode failures and undetected missing ASNs, with remediation |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Scope
 
 | | |

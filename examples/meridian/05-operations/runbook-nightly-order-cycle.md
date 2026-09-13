@@ -29,6 +29,25 @@ tags: [runbook, operations, batch]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [When to use this](#when-to-use-this) | Triggering alerts, symptoms, and the runbooks to use instead |
+| [Before you start](#before-you-start) | Access, tools, and contacts needed before starting |
+| [1. Assess](#1-assess) | Establish what failed and how much time remains before the cutoff |
+| [2. Specific symptoms](#2-specific-symptoms) | Control total mismatch, overrun, and abend — symptom by symptom |
+| [3. Recover the chain](#3-recover-the-chain) | Identify the restart point and restart the chain safely |
+| [4. Cutoff will be missed](#4-cutoff-will-be-missed) | What to do when under 30 minutes remain — and why not to rush a fix |
+| [5. Files already transmitted](#5-files-already-transmitted) | Files already at 43 vendors: do not retransmit; cancel-and-replace instead |
+| [6. Verify](#6-verify) | Chain completion and reconciliation checks with expected results |
+| [7. After](#7-after) | Ticket updates, Order Operations notification, follow-up actions |
+| [Related information](#related-information) | Architecture, batch design, job catalog, and interface references |
+| [Execution log](#execution-log) | Every real execution recorded, including where the procedure was found wrong |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## When to use this
 
 | | |

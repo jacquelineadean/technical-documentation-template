@@ -27,6 +27,21 @@ tags: [data, dictionary, order]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Scope](#1-scope) | `ORD_LIN` and `ORD_LIN_DEC` — 47 of 118 columns documented |
+| [2. Entity: `ORD_LIN`](#2-entity-ord_lin) | Order line: grain, columns, and fields with non-obvious semantics |
+| [3. Entity: `ORD_LIN_DEC`](#3-entity-ord_lin_dec) | Decoded option row: grain, columns, and the `OPT_SEQ_NO` instability |
+| [4. Data quality](#4-data-quality) | Rules per field with thresholds and current attainment |
+| [5. Physical profile](#5-physical-profile) | Profiling evidence: cardinality, nulls, and values still in use since 2020 |
+| [6. Usage](#6-usage) | Readers, writers, interfaces, reports, and rules per field |
+| [7. History](#7-history) | Field changes, including `SLS_OBJ_CD` repurposing that breaks pre-2007 comparability |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Scope
 
 | | |

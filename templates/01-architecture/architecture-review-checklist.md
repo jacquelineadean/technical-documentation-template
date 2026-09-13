@@ -28,6 +28,27 @@ tags: [review, governance]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [Review record](#review-record) | Subject, documents under review, review type, participants, outcome |
+| [1. Problem and drivers](#1-problem-and-drivers) | Business problem stated with evidence; ranked quality attributes |
+| [2. Scope](#2-scope) | In and out of scope; affected domains and external parties |
+| [3. Solution](#3-solution) | Genuine alternatives; consistency with principles and integration patterns |
+| [4. Data](#4-data) | Ownership per entity, cross-domain writes, authoritative sources |
+| [5. Interfaces](#5-interfaces) | ICD drafted, accountable owners both sides, versioning policy |
+| [6. Non-functional](#6-non-functional) | Numbers and measurement methods; percentile targets; 12-month headroom |
+| [7. Resilience](#7-resilience) | Failure modes enumerated; silent failures and detection time; dependency behaviour |
+| [8. Security and privacy](#8-security-and-privacy) | Trust boundaries, authentication and authorisation, sensitive-data protection |
+| [9. Operability](#9-operability) | Monitoring signals including "did not happen"; alerts, thresholds, runbooks |
+| [10. Delivery and risk](#10-delivery-and-risk) | Value-first slicing, reversibility, cross-team dependencies |
+| [11. Documentation](#11-documentation) | TAD updates, ADRs for expensive-to-reverse decisions, rule IDs |
+| [Conditions and actions](#conditions-and-actions) | Conditions and actions, with owner, due date, and whether blocking |
+| [Dissenting views](#dissenting-views) | Unresolved disagreement, recorded so overrides remain traceable |
+
+---
+
 ## Review record
 
 | | |

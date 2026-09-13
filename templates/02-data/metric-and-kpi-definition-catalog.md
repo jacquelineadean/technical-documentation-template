@@ -31,6 +31,19 @@ tags: [metrics, reporting]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Catalog](#1-catalog) | Metric register with owner, grain, refresh, certification level |
+| [2. Metric: `<Metric name>`](#2-metric-metric-name) | Per-metric definition: formula, filters, grain, exclusions, worked example |
+| [3. Metric relationships](#3-metric-relationships) | How metrics derive from one another |
+| [4. Uncertified metrics in use](#4-uncertified-metrics-in-use) | Metrics circulating without an approved definition — the remediation backlog |
+| [5. Conflicting implementations](#5-conflicting-implementations) | The same metric implemented differently, with observed variance and resolution |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Catalog
 
 | ID | Metric | Domain | Owner | Grain | Refresh | Certified | Systems |

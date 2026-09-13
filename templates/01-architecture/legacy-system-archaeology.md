@@ -30,6 +30,26 @@ tags: [legacy, archaeology, reverse-engineering]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Subject](#1-subject) | Component, location, size, language, last change, current owner |
+| [2. Investigation record](#2-investigation-record) | Sessions, methods applied, time spent, and yield per method |
+| [3. Recovered structure](#3-recovered-structure) | Recovered module structure with evidence and confidence per module |
+| [4. Recovered behaviour](#4-recovered-behaviour) | Business rules, decision logic, and edge cases recovered from code |
+| [5. Data usage](#5-data-usage) | Objects read and written, fields used, and undocumented dependencies |
+| [6. Data profiling results](#6-data-profiling-results) | Evidence from the data itself: cardinality, nulls, values still in use |
+| [7. External touchpoints](#7-external-touchpoints) | Discovered inbound and outbound touchpoints, and whether the catalog knows them |
+| [8. Historical context](#8-historical-context) | Why the system is shaped this way, reconstructed from history and interviews |
+| [9. Open questions](#9-open-questions) | Unresolved questions with the investigation needed, owner, and target |
+| [10. Confidence summary](#10-confidence-summary) | Verified, inferred, and assumed counts per area, with coverage |
+| [11. Risks in current understanding](#11-risks-in-current-understanding) | What breaks if the current understanding is wrong |
+| [12. Recommendations](#12-recommendations) | Recommendations and the documents to create or update from these findings |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Subject
 
 | | |

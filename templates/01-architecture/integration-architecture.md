@@ -27,6 +27,24 @@ tags: [integration]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Integration landscape](#1-integration-landscape) | Landscape diagram and the integration profile by count |
+| [2. Integration patterns](#2-integration-patterns) | Pattern, when to use it, when not to, and current usage |
+| [3. Middleware and infrastructure](#3-middleware-and-infrastructure) | Middleware products, ownership, support status, capacity headroom |
+| [4. Cross-cutting integration concerns](#4-cross-cutting-integration-concerns) | Delivery semantics, ordering, idempotency, error handling, replay |
+| [5. Data transformation and canonical model](#5-data-transformation-and-canonical-model) | Canonical model usage and where transformation happens |
+| [6. Versioning and change](#6-versioning-and-change) | Versioning scheme, compatibility policy, notice period, parallel run |
+| [7. Monitoring](#7-monitoring) | Signals, thresholds, routes, runbooks per interface class |
+| [8. Adding a new interface](#8-adding-a-new-interface) | The path from proposal to production, with gate criteria |
+| [9. Interface inventory](#9-interface-inventory) | Summary inventory; the Interface Catalog remains authoritative |
+| [10. Known issues and debt](#10-known-issues-and-debt) | Integration debt with risk, remediation, and owner |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Integration landscape
 
 ```mermaid

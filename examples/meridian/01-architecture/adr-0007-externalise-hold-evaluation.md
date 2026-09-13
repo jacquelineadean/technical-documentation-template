@@ -32,6 +32,22 @@ tags: [decision, decomposition, strangler]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [Context](#context) | Hold evaluation buried in 2,400 lines of `ORDDEC01`, and the pressure that created |
+| [Decision](#decision) | Extract to a synchronous Hold Service and retire the duplicate `ORDHLD09` routine |
+| [Options considered](#options-considered) | Synchronous service, asynchronous evaluation, rules engine, in-place refactor |
+| [Consequences](#consequences) | Lead time down from 34 to 9 days; new runtime dependency on the critical path |
+| [Implementation notes](#implementation-notes) | Effort, shadow-run period, and per-hold-class cutover sequencing |
+| [Compliance and verification](#compliance-and-verification) | CI static check and DB2 authorisation proving the decision still holds |
+| [Re-evaluation triggers](#re-evaluation-triggers) | Throughput and availability thresholds that would reopen the decision |
+| [References](#references) | TAD sections, related ADRs, incident records |
+| [Change log](#change-log) | Version, date, change |
+
+---
+
 ## Context
 
 Hold evaluation lived inside `ORDDEC01`, the COBOL decoding engine, interleaved with package

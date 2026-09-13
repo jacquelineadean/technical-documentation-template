@@ -27,6 +27,29 @@ tags: [testing, uat]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Scope and approach](#1-scope-and-approach) | Initiative, test manager, and the risk-based or full-regression approach |
+| [2. Levels](#2-levels) | Test levels with owner, environment, automation, entry and exit criteria |
+| [3. Environments](#3-environments) | Environments, data, interface availability, parity gaps and their consequences |
+| [4. Test data](#4-test-data) | Test data sources, volumes, PII treatment, and scenarios needing specific data |
+| [5. Test cases](#5-test-cases) | Test cases with preconditions, steps, expected results, priority, automation |
+| [6. Interface testing](#6-interface-testing) | Per-interface partner testing, including error paths and their lead times |
+| [7. Data migration testing](#7-data-migration-testing) | Migration checks: record counts, control totals, field-level comparison |
+| [8. Performance testing](#8-performance-testing) | Load tests, success criteria, and batch window validation |
+| [9. Regression](#9-regression) | Regression scope derived from the impact assessment and fragile areas |
+| [10. UAT](#10-uat) | UAT purpose, participants, scenarios, entry and exit criteria |
+| [11. Defect management](#11-defect-management) | Defect severities, response and resolution targets, release-blocking rules |
+| [12. Operational readiness testing](#12-operational-readiness-testing) | Runbook executability, alert firing, support readiness |
+| [13. Schedule](#13-schedule) | Test phases and milestones |
+| [14. Risks](#14-risks) | Test risks with mitigation and owner |
+| [15. Sign-off](#15-sign-off) | Sign-off roles, dates, conditions |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Scope and approach
 
 | | |

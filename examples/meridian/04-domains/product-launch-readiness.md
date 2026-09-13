@@ -22,6 +22,26 @@ tags: [domain, portfolio, launch]
 
 # Product Launch Readiness — Domain Overview
 
+---
+
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Scope](#1-scope) | Domain `PLR` — defining what can be sold, in what combinations, from when |
+| [2. Business context](#2-business-context) | Twelve people whose reference data governs 95,000 decoded lines a night |
+| [3. Capabilities](#3-capabilities) | Portfolio definition, compatibility rules, launch gates, with maturity scores |
+| [4. Actors](#4-actors) | Portfolio analysts, launch managers, and the PLM feed |
+| [5. Core concepts](#5-core-concepts) | Package, option, compatibility rule, launch gate |
+| [6. Launch gate model](#6-launch-gate-model) | Launch gate states and their effect on order decoding |
+| [7. Model-year changeover](#7-model-year-changeover) | Model-year changeover — the defining process and the source of cross-domain friction |
+| [8. Business rules — summary](#8-business-rules--summary) | PLR rules and where each is implemented |
+| [9. Interfaces](#9-interfaces) | PLM inbound and the unowned, unmonitored `IF-205` re-pointing script |
+| [10. Known pain points](#10-known-pain-points) | No approval gate and no change preview on reference data |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Scope
 
 | | |

@@ -27,6 +27,28 @@ tags: [requirements]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Summary](#1-summary) | Initiative, sponsor, product owner, timeframe |
+| [2. Business case](#2-business-case) | Drivers with evidence, and the cost of the status quo |
+| [3. Scope](#3-scope) | In scope, out of scope, and priority per area |
+| [4. Stakeholders](#4-stakeholders) | Stakeholders with interest, influence, engagement approach |
+| [5. Current state](#5-current-state) | How it works today, and the pain points the change addresses |
+| [6. Requirements](#6-requirements) | Numbered requirements with priority, rationale, acceptance criteria, source |
+| [7. Non-functional requirements](#7-non-functional-requirements) | Business-stated non-functional requirements, with numbers and measurement |
+| [8. Data requirements](#8-data-requirements) | Data needed, availability, gaps, and reporting requirements |
+| [9. External impact](#9-external-impact) | External parties affected, notice required, agreements needed |
+| [10. Compliance](#10-compliance) | Regulatory and policy obligations, and the evidence each needs |
+| [11. Success criteria](#11-success-criteria) | Success criteria with measure, target, timing, and the definition of done |
+| [12. Risks and dependencies](#12-risks-and-dependencies) | Risks, dependencies, and issues with mitigation and owner |
+| [13. Open questions](#13-open-questions) | Open questions, whether blocking, owner, needed-by date |
+| [14. Approval](#14-approval) | Sign-off roles and dates |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Summary
 
 | | |

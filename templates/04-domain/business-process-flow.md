@@ -29,6 +29,26 @@ tags: [process]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Summary](#1-summary) | Process, purpose, owner, trigger, outcome, volume |
+| [2. Process flow](#2-process-flow) | Swimlane flow including the unhappy path |
+| [3. Steps](#3-steps) | Per-step actor, system, input, output, rules, duration, failure behaviour |
+| [4. Decision points](#4-decision-points) | Decision criteria, outcomes, who decides, override rights, population split |
+| [5. Exception paths](#5-exception-paths) | One block per exception: frequency, handler, how it rejoins the main flow |
+| [6. Manual steps](#6-manual-steps) | Human steps with effort, reason, and risk if the person is unavailable |
+| [7. Timing](#7-timing) | Segment timings and the wait states that consume most elapsed time |
+| [8. Controls](#8-controls) | Preventive, detective, and corrective controls; segregation of duties |
+| [9. Systems and data](#9-systems-and-data) | Systems and data touched per step, keyed to interface IDs |
+| [10. Variants](#10-variants) | Differences by region, product, partner class, or customer type |
+| [11. Metrics](#11-metrics) | Straight-through rate, cycle time, exception rate, with targets |
+| [12. Pain points and improvement](#12-pain-points-and-improvement) | Pain points with root cause, improvement, and effort |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Summary
 
 | | |

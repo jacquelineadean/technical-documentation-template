@@ -32,6 +32,24 @@ tags: [rules]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Summary](#1-summary) | Active, retired, and unattributed rule counts, with confidence breakdown |
+| [2. Categories](#2-categories) | Rule categories, their purposes, and allocated ID ranges |
+| [3. Rule register](#3-rule-register) | One row per rule: condition, outcome, authority, implementation, volatility |
+| [4. Rule detail](#4-rule-detail) | Full blocks for complex, contested, or financially significant rules |
+| [5. Decision tables](#5-decision-tables) | Condition combinations as decision tables, which make gaps visible |
+| [6. Rule precedence](#6-rule-precedence) | Which rule wins on conflict, and whether that is by design or execution order |
+| [7. Rules by implementation mechanism](#7-rules-by-implementation-mechanism) | Rules grouped by mechanism, with change lead time and approval |
+| [8. Retired rules](#8-retired-rules) | Retired rules, retained because historical data was produced under them |
+| [9. Unattributed rules ⚠️](#9-unattributed-rules-) | Rules found in code with no identifiable authority — highest risk in the catalog |
+| [10. Rule change log](#10-rule-change-log) | Per-rule changes with effective date and historical data affected |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Summary
 
 | | Count |

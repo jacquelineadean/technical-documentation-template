@@ -24,6 +24,29 @@ tags: []
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Summary](#1-summary) | Initiative, business driver, source requirements, scope in one block |
+| [2. Requirements addressed](#2-requirements-addressed) | Requirement → design response, with what is explicitly not addressed |
+| [3. Current state](#3-current-state) | What exists today in the area being changed |
+| [4. Target state](#4-target-state) | Target architecture and a component-level change summary |
+| [5. Solution detail](#5-solution-detail) | Processing flow and the key design elements |
+| [6. Data design](#6-data-design) | New and modified entities, migration, retention, ownership |
+| [7. Interface design](#7-interface-design) | New and changed interfaces, ICD status, partner notice periods |
+| [8. Non-functional impact](#8-non-functional-impact) | Effect on latency, throughput, availability, and other attributes |
+| [9. Design decisions](#9-design-decisions) | Decisions taken, options weighed, and which need an ADR |
+| [10. Alternatives considered](#10-alternatives-considered) | Alternatives rejected, with reasons |
+| [11. Risks, assumptions, dependencies](#11-risks-assumptions-dependencies) | Risks, assumptions, and dependencies with owners and mitigations |
+| [12. Delivery approach](#12-delivery-approach) | Phasing, exit criteria, rollback points |
+| [13. Testing approach](#13-testing-approach) | Test levels, environments, data, owners |
+| [14. Operational readiness](#14-operational-readiness) | Runbook, monitoring, alerting, and support readiness |
+| [15. Open questions](#15-open-questions) | Open questions, whether blocking, owner, needed-by date |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Summary
 
 | | |

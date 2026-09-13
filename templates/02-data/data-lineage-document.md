@@ -34,6 +34,25 @@ tags: [lineage, data]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Summary](#1-summary) | Flow name, business purpose, origin and destination, criticality |
+| [2. Lineage overview](#2-lineage-overview) | End-to-end hop diagram and where the greatest transformation or risk sits |
+| [3. Field-level lineage](#3-field-level-lineage) | Per-hop field mappings and transformation logic |
+| [4. Critical Data Element trace](#4-critical-data-element-trace) | One row per Critical Data Element showing its full journey — the auditor's table |
+| [5. Controls and reconciliation](#5-controls-and-reconciliation) | Per-hop controls: type, frequency, tolerance, break procedure, evidence |
+| [6. Timing and dependencies](#6-timing-and-dependencies) | Hop scheduling, cutoffs, and consequences of missing them |
+| [7. Temporal behaviour](#7-temporal-behaviour) | Effective dating, restatement, late arrivals, and time zones |
+| [8. Known gaps and issues](#8-known-gaps-and-issues) | Known gaps, plus persistent reconciliation differences and their explanation |
+| [9. Consumers](#9-consumers) | Who consumes each hop, what they use, and the notice they require |
+| [10. Retention](#10-retention) | Retention per hop, including where it shortens along the flow |
+| [11. Verification](#11-verification) | How the mappings were checked, by whom, and the result |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Summary
 
 | | |

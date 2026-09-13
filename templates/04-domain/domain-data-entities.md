@@ -25,6 +25,24 @@ tags: [data, entities]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Entity inventory](#1-entity-inventory) | Entities by ownership class, volume, growth, retention, dictionary link |
+| [2. Entity relationships](#2-entity-relationships) | Relationships, cardinality, enforcement mechanism, orphan presence |
+| [3. Owned entities](#3-owned-entities) | Per-entity detail for entities this domain owns |
+| [4. Read-only entities](#4-read-only-entities) | Entities read but not owned: currency, how obtained, behaviour if unavailable |
+| [5. Shared entities](#5-shared-entities) | Co-owned entities with column-level ownership and conflict handling |
+| [6. Reference data used](#6-reference-data-used) | Code sets consumed, caching, and behaviour on an unknown value |
+| [7. Derived data](#7-derived-data) | Derived fields with their rule ID and lineage entry |
+| [8. Data volumes](#8-data-volumes) | Row counts, daily change rates, size, growth, largest partition |
+| [9. Data quality](#9-data-quality) | Known issues per entity and DQ rule coverage gaps |
+| [10. Archival](#10-archival) | Active retention, archive location, accessibility, purge |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Entity inventory
 
 | Entity | Ownership | Physical object | Volume | Growth | Retention | Dictionary |

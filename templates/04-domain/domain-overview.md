@@ -31,6 +31,26 @@ tags: [domain]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Scope](#1-scope) | Domain name, code, business purpose, boundaries |
+| [2. Business context](#2-business-context) | Why the domain exists and what would stop without it |
+| [3. Capabilities](#3-capabilities) | Capabilities with volume, criticality, automation level |
+| [4. Actors](#4-actors) | Internal users, external parties, systems, scheduled processes |
+| [5. Core concepts](#5-core-concepts) | Domain vocabulary, linked to the glossary rather than restated |
+| [6. Process summary](#6-process-summary) | Processes with trigger, outcome, frequency, and detail links |
+| [7. Key entities](#7-key-entities) | Entities owned and read, with lifecycle and detail links |
+| [8. Systems and components](#8-systems-and-components) | Components implementing the domain, and what is shared |
+| [9. Dependencies](#9-dependencies) | Upstream providers and downstream consumers, with criticality |
+| [10. Rules summary](#10-rules-summary) | Rule categories, volatility, and where they are implemented |
+| [11. Known pain points](#11-known-pain-points) | Pain points and the manual effort the domain absorbs |
+| [12. Domain pack](#12-domain-pack) | Status of the six domain-pack documents |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Scope
 
 | | |

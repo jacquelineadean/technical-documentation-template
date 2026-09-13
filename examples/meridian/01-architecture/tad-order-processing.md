@@ -27,26 +27,33 @@ tags: [legacy, cobol, batch, edi, order-to-cash]
 > is in `MOD-MER-001`. Where a statement about existing behaviour is not trivially
 > observable it carries a confidence tag: `✅ Verified` / `🟡 Inferred` / `🔴 Assumed`.
 
+---
+
 ## Contents
 
-1. [Scope and audience](#1-scope-and-audience)
-2. [Architectural drivers](#2-architectural-drivers)
-3. [Principles and constraints](#3-principles-and-constraints)
-4. [Context — C4 Level 1](#4-context--c4-level-1)
-5. [Container view — C4 Level 2](#5-container-view--c4-level-2)
-6. [Component views — C4 Level 3](#6-component-views--c4-level-3)
-7. [Runtime views](#7-runtime-views)
-8. [Data architecture](#8-data-architecture)
-9. [Integration architecture](#9-integration-architecture)
-10. [Batch and scheduling](#10-batch-and-scheduling)
-11. [Cross-cutting concerns](#11-cross-cutting-concerns)
-12. [Non-functional requirements](#12-non-functional-requirements)
-13. [Failure modes and resilience](#13-failure-modes-and-resilience)
-14. [Deployment and environments](#14-deployment-and-environments)
-15. [Security architecture](#15-security-architecture)
-16. [Architecture decisions](#16-architecture-decisions)
-17. [Technical debt and known weaknesses](#17-technical-debt-and-known-weaknesses)
-18. [Evolution and open questions](#18-evolution-and-open-questions)
+| Section | Summary |
+| --- | --- |
+| [1. Scope and audience](#1-scope-and-audience) | What release `R2026.09` covers, what is excluded, and who reads it |
+| [2. Architectural drivers](#2-architectural-drivers) | Business, technical, and historical drivers — with whether each is still valid |
+| [3. Principles and constraints](#3-principles-and-constraints) | Six principles with compliance status, and the constraints that cannot be traded |
+| [4. Context — C4 Level 1](#4-context--c4-level-1) | OPS between 3,200 dealers, PLR, and four outbound obligations |
+| [5. Container view — C4 Level 2](#5-container-view--c4-level-2) | Ten containers; the Hold Service is the only one extracted from the COBOL core |
+| [6. Component views — C4 Level 3](#6-component-views--c4-level-3) | Level 3 for the Decoding Engine and Hold Service; why the rest are omitted |
+| [7. Runtime views](#7-runtime-views) | Order submission to dispatch, plus a failure scenario, with latency budgets |
+| [8. Data architecture](#8-data-architecture) | DB2 z/OS at 41 TB, store ownership, and cross-domain column ownership |
+| [9. Integration architecture](#9-integration-architecture) | Patterns in use, Sterling B2B, and the interface inventory summary |
+| [10. Batch and scheduling](#10-batch-and-scheduling) | Window and critical-path summary; full detail in `BAT-MER-001` |
+| [11. Cross-cutting concerns](#11-cross-cutting-concerns) | Authentication, authorisation, logging, configuration — with gaps named |
+| [12. Non-functional requirements](#12-non-functional-requirements) | Measured NFR values, three of which are not met |
+| [13. Failure modes and resilience](#13-failure-modes-and-resilience) | Ten failure modes with detection time, including the silent-failure analysis |
+| [14. Deployment and environments](#14-deployment-and-environments) | Environment parity, including a pre-production copy at full volume |
+| [15. Security architecture](#15-security-architecture) | Trust boundaries, controls, and the classifications crossing each |
+| [16. Architecture decisions](#16-architecture-decisions) | ADR register, with validity assessed and the governance caveat on ADR-PLR-0012 |
+| [17. Technical debt and known weaknesses](#17-technical-debt-and-known-weaknesses) | Debt register grounded in incident history, with effort, owner, priority |
+| [18. Evolution and open questions](#18-evolution-and-open-questions) | Sterling upgrade, scheduler EOL, and the open architectural questions |
+| [Appendix A — Confidence summary](#appendix-a--confidence-summary) | Verified, inferred, and assumed counts per section, trended across versions |
+| [Appendix B — References](#appendix-b--references) | Contracts, policies, code locations, and standards cited |
+| [Change log](#change-log) | Version, date, author, change, approver |
 
 ---
 

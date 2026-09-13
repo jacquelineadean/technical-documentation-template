@@ -28,6 +28,21 @@ tags: [metrics, kpi, reporting]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Catalog](#1-catalog) | Eleven metrics with owner, grain, refresh, certification status |
+| [2. Metric: Units sold (incentive) — MET-001](#2-metric-units-sold-incentive--met-001) | Units sold (incentive): definition, formula, exclusions, worked example |
+| [3. Metric: Objective attainment % — MET-004](#3-metric-objective-attainment---met-004) | Objective attainment %: definition, rounding materiality, break-in-series flag |
+| [4. Uncertified metrics in use](#4-uncertified-metrics-in-use) | One uncertified metric, unassigned, on three dealer-facing dashboards |
+| [5. Conflicting implementations](#5-conflicting-implementations) | The same metric computed differently, with observed variance and resolution |
+| [6. Metric relationships](#6-metric-relationships) | How the metrics derive from one another |
+| [7. Period definitions ⚠️](#7-period-definitions-) | Three legitimate period ends, and the disputes caused by confusing them |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Catalog
 
 | ID | Metric | Owner | Grain | Refresh | Certification | Systems |

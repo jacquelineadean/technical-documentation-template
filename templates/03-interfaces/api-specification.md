@@ -30,6 +30,27 @@ tags: [api, interface]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Overview](#1-overview) | API name, interface ID, version, base URLs, counterparties |
+| [2. Authentication and authorisation](#2-authentication-and-authorisation) | Authentication method, credential type, issuance, rotation, authorisation model |
+| [3. Conventions](#3-conventions) | Content types, encoding, naming, date formats, error envelope |
+| [4. Operations](#4-operations) | Per-operation request, response, status codes, idempotency |
+| [5. Idempotency](#5-idempotency) | Idempotency key source, scope, retention, replay behaviour |
+| [6. Pagination, filtering, sorting](#6-pagination-filtering-sorting) | Pagination style, page sizes, filter and sort parameters |
+| [7. Rate limiting](#7-rate-limiting) | Limits per consumer class, burst, and `429` behaviour |
+| [8. Performance](#8-performance) | Percentile targets, timeouts, payload ceilings, expected request rates |
+| [9. Asynchronous patterns](#9-asynchronous-patterns) | `202` acceptance, status polling, and callback patterns |
+| [10. Versioning and deprecation](#10-versioning-and-deprecation) | Versioning scheme, breaking-change definition, deprecation and sunset policy |
+| [11. Observability](#11-observability) | Correlation IDs, request logging, metrics, tracing |
+| [12. Client guidance](#12-client-guidance) | Recommended timeouts, retry policy with backoff and jitter, connection reuse |
+| [13. Testing](#13-testing) | Sandbox environments, credentials, and the certification test set |
+| [Change log](#change-log) | Version, date, author, change, breaking flag |
+
+---
+
 ## 1. Overview
 
 | | |

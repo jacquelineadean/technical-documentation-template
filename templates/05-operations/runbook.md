@@ -29,6 +29,25 @@ tags: [operations, runbook]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [When to use this](#when-to-use-this) | Triggering alerts, symptoms, and the situations this runbook does not cover |
+| [Before you start](#before-you-start) | Access, tools, and approvals needed before starting |
+| [1. Assess](#1-assess) | Confirm the symptom and establish scope before acting |
+| [2. Contain](#2-contain) | Stop the problem growing before diagnosing it |
+| [3. Resolve](#3-resolve) | The corrective steps, with expected output at each check |
+| [4. Diagnose](#4-diagnose) | Ordered checks for when the cause is not obvious |
+| [5. Escalate](#5-escalate) | Escalation triggers, routes, and expected response |
+| [6. Verify](#6-verify) | Confirm the symptom cleared and downstream effects are correct |
+| [7. After](#7-after) | Ticket updates, consumer notification, follow-up actions |
+| [Related information](#related-information) | Architecture, component spec, job catalog, interface references |
+| [Execution log](#execution-log) | Every real execution recorded, so procedure drift becomes visible |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## When to use this
 
 | | |

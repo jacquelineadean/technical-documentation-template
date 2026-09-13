@@ -20,6 +20,20 @@ are documenting, use [`templates/00-foundations/glossary-and-taxonomy.md`](../te
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [Document types](#document-types) | Abbreviations for every document type in the corpus |
+| [Architecture terms](#architecture-terms) | Architecturally significant, blast radius, seam, strangler, and related terms |
+| [Data terms](#data-terms) | Authoritative source, canonical model, grain, lineage, golden record |
+| [Data quality dimensions](#data-quality-dimensions) | Completeness, validity, consistency, timeliness — with example measures |
+| [Interface terms](#interface-terms) | Control total, EDI transaction sets, idempotency, acknowledgement levels |
+| [Operations terms](#operations-terms) | Batch window, error budget, RTO/RPO, severity, hypercare |
+| [Confidence conventions](#confidence-conventions) | `✅ Verified` / `🟡 Inferred` / `🔴 Assumed` / `🔴 Unknown` definitions |
+
+---
+
 ## Document types
 
 | Term | Definition |

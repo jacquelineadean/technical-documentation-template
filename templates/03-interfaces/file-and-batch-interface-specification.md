@@ -27,6 +27,28 @@ tags: [file, batch, edi, interface]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Overview](#1-overview) | Interface ID, direction, counterparty, business purpose |
+| [2. File identification](#2-file-identification) | Filename pattern with every variable part defined; sequence and gap semantics |
+| [3. Transport](#3-transport) | Protocol, hosts, directories, credentials, archival |
+| [4. File structure](#4-file-structure) | Format, encoding, line terminators, record types, ordering |
+| [5. Record layouts](#5-record-layouts) | Field-level header, detail, and trailer layouts with positions and types |
+| [6. Control totals and reconciliation](#6-control-totals-and-reconciliation) | Record counts, amount totals, tolerances, and mismatch actions |
+| [7. Processing](#7-processing) | Processing model, transaction boundary, duplicate and resend handling |
+| [8. Validation](#8-validation) | Validation levels from file to field, with failure action and scope |
+| [9. Error codes](#9-error-codes) | Error codes, level, cause, and required action |
+| [10. EDI specifics](#10-edi-specifics) | X12/EDIFACT standard, transaction set, envelopes, acknowledgements |
+| [11. Volumes](#11-volumes) | Typical and peak record counts, file sizes, processing durations |
+| [12. Monitoring](#12-monitoring) | Non-arrival, rejection, and volume-anomaly signals with runbooks |
+| [13. Example](#13-example) | Worked example file, including edge cases such as an empty file |
+| [14. Operations](#14-operations) | Manual resend, reprocessing an archived file, sequence resets |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Overview
 
 | | |

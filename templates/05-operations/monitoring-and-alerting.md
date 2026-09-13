@@ -28,6 +28,26 @@ tags: [monitoring, observability]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Coverage summary](#1-coverage-summary) | Platforms, routing, dashboards, and coverage ratio |
+| [2. Service level indicators](#2-service-level-indicators) | SLIs with measurement, SLO target, current attainment, error budget |
+| [3. Alerts](#3-alerts) | Alert register: signal, condition, severity, route, runbook, business symptom |
+| [4. Alert detail](#4-alert-detail) | Per-alert detail: what it detects, impact if unaddressed, tuning history |
+| [5. Coverage against failure modes](#5-coverage-against-failure-modes) | Alert coverage cross-checked against the FMEA — the gaps are the point |
+| [6. "Did not happen" monitoring ⚠️](#6-did-not-happen-monitoring-) | Absence-of-event alerting: files that never arrive, jobs that never start |
+| [7. Data quality and reconciliation monitoring](#7-data-quality-and-reconciliation-monitoring) | Reconciliation breaks and critical DQ rule breaches |
+| [8. Business monitoring](#8-business-monitoring) | Business-meaningful signals that detect a silent failure |
+| [9. Dashboards](#9-dashboards) | Dashboards by audience, and the single health screen |
+| [10. Logging](#10-logging) | Log destinations, retention, correlation IDs, sensitive-data exclusion |
+| [11. On-call](#11-on-call) | Rotation, hours, escalation, handover |
+| [12. Alert hygiene](#12-alert-hygiene) | Fire rates, action rates, and the keep/tune/downgrade/delete verdict |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Coverage summary
 
 | | |

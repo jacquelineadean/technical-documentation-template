@@ -27,6 +27,23 @@ tags: [dependencies, vendors, risk]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Summary](#1-summary) | 51 dependencies, 14 Tier 1, with contract and failover coverage |
+| [2. Register — Tier 1](#2-register--tier-1) | The 14 Tier 1 dependencies, their interfaces, SLAs, and alternatives |
+| [3. Dependency detail](#3-dependency-detail) | Detail for the dependencies whose failure posture is non-obvious |
+| [4. Concentration risk](#4-concentration-risk) | IBM carrying platform, integration, and scheduler — correlated rather than isolated failure |
+| [5. Contract and commercial](#5-contract-and-commercial) | Expiries and notice deadlines, including one renewal decision already overdue |
+| [6. Compliance](#6-compliance) | Data shared, classification, DPAs, processing location, certifications |
+| [7. Performance](#7-performance) | SLA attainment over 12 months, breaches, credits, and the V19 exception |
+| [8. Risks](#8-risks) | Dependency risks, notably the 2028 scheduler EOL with no interim mitigation |
+| [9. Dependencies with no technical footprint](#9-dependencies-with-no-technical-footprint) | Portal downloads, emailed files, and named individuals — found by asking |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Summary
 
 | | Count |

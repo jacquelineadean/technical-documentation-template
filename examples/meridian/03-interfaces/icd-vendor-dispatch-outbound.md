@@ -30,6 +30,28 @@ tags: [interface, icd, edi, x12, vendor]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Identification](#1-identification) | `IF-042`, interface version 3.1, distinct from the document version |
+| [2. Transport](#2-transport) | AS2 for 31 vendors, SFTP for 12, with per-vendor authentication |
+| [3. Timing and volume](#3-timing-and-volume) | Nightly build and transmission against the 03:00 UTC cutoff |
+| [4. Payload](#4-payload) | X12 004010 transaction set 850, segment by segment |
+| [5. Processing semantics](#5-processing-semantics) | At-least-once delivery, no ordering guarantee, duplicate handling |
+| [6. Interaction](#6-interaction) | Sequence diagrams for the happy path and for error interactions |
+| [7. Validation and errors](#7-validation-and-errors) | Validation levels and the error catalog |
+| [8. Reconciliation](#8-reconciliation) | `CTT` control totals in the payload and independent nightly reconciliation |
+| [9. Service levels](#9-service-levels) | Delivery-by-03:00 and endpoint availability commitments |
+| [10. Monitoring](#10-monitoring) | Build failure, control-total mismatch, and non-acknowledgement signals |
+| [11. Versioning and change](#11-versioning-and-change) | `major.minor` scheme, and the fact the version is not carried in the payload |
+| [12. Testing and certification](#12-testing-and-certification) | Fourteen certification scenarios and which are mandatory |
+| [13. Operations](#13-operations) | Runbook references, cancel-and-replace, and manual retransmission |
+| [14. Open items](#14-open-items) | Open items with owner and target |
+| [Change log](#change-log) | Document version, date, author, change, interface version |
+
+---
+
 ## 1. Identification
 
 | | |

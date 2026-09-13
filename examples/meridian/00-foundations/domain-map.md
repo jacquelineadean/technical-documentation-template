@@ -21,6 +21,23 @@ tags: [domains, bounded-context, coupling]
 
 # Meridian — Domain Map
 
+---
+
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Domains](#1-domains) | PLR, OPS, and SPR — purpose, owners, and the entities each owns |
+| [2. Domain map](#2-domain-map) | Relationships between the three domains, typed and assessed |
+| [3. Context boundaries and translation](#3-context-boundaries-and-translation) | Terms whose meaning changes across domains, with translation rules |
+| [4. Shared data](#4-shared-data) | Shared tables, including the SPR write into OPS-owned `ORD_LIN` |
+| [5. Domain interaction sequence](#5-domain-interaction-sequence) | Model-year changeover traced across all three domains |
+| [6. Domain boundary health](#6-domain-boundary-health) | Boundary symptoms assessed against 24 months of change and incident history |
+| [7. Domain pack index](#7-domain-pack-index) | Domain-pack document status per domain |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Domains
 
 | Domain | Code | Purpose | Business owner | Technical owner | Core entities owned |

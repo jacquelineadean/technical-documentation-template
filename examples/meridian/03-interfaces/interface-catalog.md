@@ -30,6 +30,24 @@ tags: [interfaces, catalog]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Summary](#1-summary) | 187 live interfaces by direction, criticality, and documentation coverage |
+| [2. Catalog — Tier 1 interfaces](#2-catalog--tier-1-interfaces) | The Tier 1 interfaces with counterparty, transport, volume, owners, coverage |
+| [3. By counterparty](#3-by-counterparty) | Interfaces grouped by counterparty, with notice periods and register links |
+| [4. By domain](#4-by-domain) | Inbound and outbound counts per domain |
+| [5. Data crossing the boundary](#5-data-crossing-the-boundary) | Entities, CDEs, classification, and counterparty retention per boundary |
+| [6. Timing map](#6-timing-map) | Windows, cutoffs, dependencies, and slack |
+| [7. Manual interfaces ⚠️](#7-manual-interfaces-) | Seventeen interfaces with a human step, invisible to automated discovery |
+| [8. Discovery record](#8-discovery-record) | How the catalog grew from an estimated 62 to 187, and where the extras came from |
+| [9. Deprecated and retired](#9-deprecated-and-retired) | Deprecated interfaces still in use, and what blocks their retirement |
+| [10. Gaps](#10-gaps) | Missing ICDs, owners, monitoring, and reconciliation, with remediation |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Summary
 
 | | Count |

@@ -49,6 +49,7 @@ and say, for each downstream document, whether it is updated here or unaffected.
 - [ ] `python3 tools/validate_docs.py .` passes
 - [ ] `python3 tools/build_catalog.py .` run if documents were added or removed
 - [ ] Front matter complete; `owner` is a role, not a person
+- [ ] `## Contents` table updated for any section added, renamed, or removed
 - [ ] Claims about existing behaviour carry a confidence tag with evidence
 - [ ] Every `🔴 Assumed` item has a named owner and a target date
 - [ ] No credentials, keys, internal hostnames, or real personal data

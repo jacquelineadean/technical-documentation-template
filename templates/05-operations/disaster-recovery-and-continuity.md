@@ -29,6 +29,25 @@ tags: [dr, continuity]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Objectives](#1-objectives) | RTO and RPO per capability, whether achievable, and last tested |
+| [2. Business impact analysis](#2-business-impact-analysis) | Business impact by outage duration, and sensitivity to timing |
+| [3. Scenarios](#3-scenarios) | Disaster scenarios with likelihood, strategy, and test status |
+| [4. Architecture](#4-architecture) | Recovery site type, replication, and failover mechanism |
+| [5. Backups](#5-backups) | Backup types, retention, immutability, encryption, last restore test |
+| [6. Recovery procedures](#6-recovery-procedures) | Step-by-step recovery procedure per scenario |
+| [7. Data reconciliation after recovery](#7-data-reconciliation-after-recovery) | Establishing the last consistent point and identifying lost transactions |
+| [8. Business continuity](#8-business-continuity) | Manual continuity capacity, stated as a number rather than implied |
+| [9. Communications](#9-communications) | Audiences, triggers, channels, and contacts held offline |
+| [10. Testing](#10-testing) | Test types, cadence, results, and outstanding findings |
+| [11. Dependencies](#11-dependencies) | Supplier DR capability, and whether their RTO is compatible with ours |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Objectives
 
 | Capability | RTO | RPO | Business justification | Currently achievable | Last tested | Evidence |

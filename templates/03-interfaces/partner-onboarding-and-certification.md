@@ -27,6 +27,24 @@ tags: [partners, onboarding]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Process](#1-process) | Stages from initiation to go-live, with exit criteria and gate approvers |
+| [2. Partner profiles](#2-partner-profiles) | Predefined integration profiles that reduce bespoke variation |
+| [3. Capability assessment](#3-capability-assessment) | Partner volumes, formats, capabilities, and their implications |
+| [4. Connectivity](#4-connectivity) | Network paths, firewall rules, credentials, and lead times |
+| [5. Certification](#5-certification) | Certification scenarios, mandatory set, and results |
+| [6. Operational readiness](#6-operational-readiness) | Catalog entry, approved ICD, monitoring, runbook, support routing |
+| [7. Pilot](#7-pilot) | Pilot duration, volume limits, and success criteria |
+| [8. Go-live and hypercare](#8-go-live-and-hypercare) | Go-live, volume ramp, hypercare period, exit criteria |
+| [9. Per-partner record](#9-per-partner-record) | Per-partner record, profile, and approved deviations |
+| [10. Offboarding](#10-offboarding) | Notice, final transmission, credential revocation, data disposition |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Process
 
 ```mermaid

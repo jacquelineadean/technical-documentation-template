@@ -29,6 +29,29 @@ tags: [requirements, functional]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Summary](#1-summary) | Feature, source requirements, related design documents |
+| [2. Actors and permissions](#2-actors-and-permissions) | Actors, permitted and prohibited actions, authorisation |
+| [3. Functional behaviour](#3-functional-behaviour) | Numbered functional behaviours with trigger, processing, outcome |
+| [4. Business rules](#4-business-rules) | New and changed business rules, with effective dates |
+| [5. Validation](#5-validation) | Field and cross-field validation, messages, blocking behaviour |
+| [6. User interface](#6-user-interface) | Screens described as information and actions, not pixels |
+| [7. Interfaces](#7-interfaces) | New and changed interfaces, payload changes, ICD status |
+| [8. Batch processing](#8-batch-processing) | New and changed jobs, schedule, inputs, outputs, dependencies |
+| [9. Reporting](#9-reporting) | New and changed reports, contents, audience, metrics |
+| [10. Error handling](#10-error-handling) | Errors, what the user sees, logging, recovery, support action |
+| [11. Migration and transition](#11-migration-and-transition) | Existing data, in-flight transactions, backwards compatibility |
+| [12. Configuration](#12-configuration) | Settings, defaults, who may change them, and the effect |
+| [13. Acceptance criteria](#13-acceptance-criteria) | Given/when/then acceptance criteria mapped to requirements and tests |
+| [14. Out of scope](#14-out-of-scope) | What is excluded and where it is handled instead |
+| [15. Open questions](#15-open-questions) | Open questions, whether blocking, owner, needed-by date |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Summary
 
 | | |

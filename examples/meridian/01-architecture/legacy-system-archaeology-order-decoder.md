@@ -33,6 +33,26 @@ tags: [legacy, archaeology, cobol, reverse-engineering]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Subject](#1-subject) | `ORDDEC01` and 14 subprograms — 41,000 lines of COBOL, 22 copybooks |
+| [2. Investigation record](#2-investigation-record) | Nine investigation sessions, methods applied, time spent, and yield |
+| [3. Recovered structure](#3-recovered-structure) | 15 modules recovered, with evidence and confidence per module |
+| [4. Recovered behaviour](#4-recovered-behaviour) | 40 business rules recovered, including the non-determinism defect |
+| [5. Data usage](#5-data-usage) | Objects read and written, and the undocumented `REF.TAXCAT` dependency |
+| [6. Data profiling results](#6-data-profiling-results) | Column profiling: 9 dormant rule types, 3 status values dead since 2014 |
+| [7. External touchpoints](#7-external-touchpoints) | Touchpoints found, including one absent from the interface catalog |
+| [8. Historical context](#8-historical-context) | The 1996 charter and the constraints that shaped the design |
+| [9. Open questions](#9-open-questions) | Open questions, notably the 1,400 lines of `ORDDEC88` nobody understands |
+| [10. Confidence summary](#10-confidence-summary) | Verified, inferred, and assumed counts per area, with coverage |
+| [11. Risks in current understanding](#11-risks-in-current-understanding) | What breaks if the current understanding is wrong |
+| [12. Recommendations](#12-recommendations) | Prioritised recommendations, including two live defects |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Subject
 
 | | |

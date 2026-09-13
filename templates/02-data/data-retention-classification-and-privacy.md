@@ -30,6 +30,24 @@ tags: [retention, privacy, classification]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Classification scheme](#1-classification-scheme) | Classification levels with storage, transmission, non-production, and access rules |
+| [2. Data inventory](#2-data-inventory) | Data categories, classification, personal and special-category flags |
+| [3. Retention schedule](#3-retention-schedule) | Retention periods with cited basis, trigger, disposal method, owner |
+| [4. Retention across the lineage](#4-retention-across-the-lineage) | Retention satisfied at every hop, including extracts, warehouses, partners, backups |
+| [5. Disposal](#5-disposal) | Disposal methods, verification, certificates, cadence |
+| [6. Privacy](#6-privacy) | Applicable regimes, controller role, lawful basis, subject rights |
+| [7. Access control](#7-access-control) | Default access per classification, grant process, recertification, logging |
+| [8. Non-production data](#8-non-production-data) | Non-production treatment, masking rules, approval, expiry |
+| [9. Compliance](#9-compliance) | Requirement status, evidence, gaps, remediation |
+| [10. Legal holds](#10-legal-holds) | Legal holds and the disposal they suspend |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Classification scheme
 
 | Level | Definition | Examples | Storage | Transmission | Non-prod | Access |

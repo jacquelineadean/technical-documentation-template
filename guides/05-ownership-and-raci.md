@@ -23,6 +23,20 @@ This defines how ownership is expressed so that never happens.
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Four distinct kinds of ownership](#1-four-distinct-kinds-of-ownership) | Document, system, data, and process ownership — distinct questions and records |
+| [2. Roles, not people](#2-roles-not-people) | Front-matter `owner` as a role; the per-system role register that resolves it |
+| [3. RACI, applied properly](#3-raci-applied-properly) | R/A/C/I definitions and the exactly-one-accountable constraint |
+| [4. Data ownership specifically](#4-data-ownership-specifically) | Data Owner, Steward, and Custodian as three separate jobs |
+| [5. Shared-database ownership](#5-shared-database-ownership) | Table- and column-granular ownership where one database serves several domains |
+| [6. Column-level ownership for contested fields](#6-column-level-ownership-for-contested-fields) | Contested columns — defined by one domain, stored by another |
+| [7. Ownership in the front matter, in practice](#7-ownership-in-the-front-matter-in-practice) | Worked front-matter and body patterns for recording ownership |
+
+---
+
 ## 1. Four distinct kinds of ownership
 
 They are routinely conflated, and conflating them is what produces the "not my problem"

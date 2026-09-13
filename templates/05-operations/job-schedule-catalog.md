@@ -26,6 +26,25 @@ tags: [batch, operations]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Summary](#1-summary) | Job count, scheduler, and where schedule definitions live |
+| [2. Catalog](#2-catalog) | One row per job: schedule, trigger, duration, dependencies, restart safety, runbook |
+| [3. Job detail](#3-job-detail) | Per-job detail for jobs needing more than a catalog row |
+| [4. Dependency graph](#4-dependency-graph) | Dependency graph with the critical path, its duration, and slack |
+| [5. Schedule timeline](#5-schedule-timeline) | Schedule as a timeline across the processing window |
+| [6. By window](#6-by-window) | Jobs per window, must-finish times, actual p95 finish, slack, risk |
+| [7. Special schedules](#7-special-schedules) | Weekly, month-end, and calendar-driven schedules, with terms defined precisely |
+| [8. Jobs requiring care ⚠️](#8-jobs-requiring-care-) | Jobs an on-call engineer must not restart casually, and the correct procedure |
+| [9. Manual interventions](#9-manual-interventions) | Recurring manual interventions and why they remain manual |
+| [10. Performance history](#10-performance-history) | Duration trends, failure counts, and jobs approaching their window |
+| [11. Retired jobs](#11-retired-jobs) | Retired jobs and whether the definition was removed from the scheduler |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Summary
 
 | | |

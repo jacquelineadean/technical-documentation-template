@@ -27,6 +27,27 @@ tags: [cutover, migration]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Summary](#1-summary) | Cutover window, duration, scope, participants |
+| [2. Readiness](#2-readiness) | Readiness criteria with evidence and status |
+| [3. Go/no-go](#3-gono-go) | Go/no-go checkpoints, decision makers, criteria, outcomes |
+| [4. Runsheet](#4-runsheet) | Minute-by-minute runsheet with verification and reversibility, timed from rehearsal |
+| [5. Data migration](#5-data-migration) | Datasets, method, duration, and reconciliation checks with tolerances |
+| [6. Rollback](#6-rollback) | Rollback decision point, trigger criteria, procedure, and time limit |
+| [7. External coordination](#7-external-coordination) | External parties, interface suspension, and expected backlog clearance |
+| [8. Communications](#8-communications) | Audiences, messages, timing, channels from T-7d through completion |
+| [9. Verification](#9-verification) | Post-cutover verification checks and which are blocking |
+| [10. Hypercare](#10-hypercare) | Hypercare duration, enhanced support hours, roster, exit criteria |
+| [11. Rehearsal record](#11-rehearsal-record) | Rehearsal results and estimated-versus-actual step timings |
+| [12. Risks](#12-risks) | Cutover risks with mitigation and contingency |
+| [13. Contacts](#13-contacts) | Roles, contacts, and availability during the window |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Summary
 
 | | |

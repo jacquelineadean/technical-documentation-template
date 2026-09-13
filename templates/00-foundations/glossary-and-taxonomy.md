@@ -29,6 +29,22 @@ tags: [vocabulary]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. How to read this glossary](#1-how-to-read-this-glossary) | Unqualified versus context-qualified terms; where the bare term is banned |
+| [2. Taxonomy](#2-taxonomy) | How the system's concepts nest |
+| [3. Terms (system-wide)](#3-terms-system-wide) | Definition, aliases, physical representation, owner — with the definition quality bar |
+| [4. Context-qualified terms ⚠️](#4-context-qualified-terms-) | One block per contested term, defined separately per context |
+| [5. Code sets referenced](#5-code-sets-referenced) | Pointers into the Reference Data Registry |
+| [6. Abbreviations and acronyms](#6-abbreviations-and-acronyms) | Expansions, including abbreviations that collide |
+| [7. Deprecated and legacy terms](#7-deprecated-and-legacy-terms) | Legacy term, where it still appears, current term, rename safety |
+| [8. Terms under dispute](#8-terms-under-dispute) | Competing positions, impact of ambiguity, owner, target resolution |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. How to read this glossary
 
 - **Unqualified terms** (§3) mean the same thing everywhere in the system.

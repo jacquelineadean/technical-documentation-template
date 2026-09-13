@@ -19,11 +19,29 @@ reviewer's job is to check these, not to restyle prose.
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [Universal — applies to every document](#universal--applies-to-every-document) | Front matter, ownership, confidence tags, layer placement, prohibited content |
+| [TAD — Technical Architecture Document](#tad--technical-architecture-document) | Scope, C4 reconciliation, NFR measurability, failure modes, debt register |
+| [ADR — Architecture Decision Record](#adr--architecture-decision-record) | Decision-stating title, forces in context, rejected options, consequences |
+| [ICD — Interface Control Document](#icd--interface-control-document) | Named counterparties, field-level specification, errors, SLA, versioning |
+| [Data Lineage](#data-lineage) | Field-level hops, numbered and reconciled across diagram and table |
+| [Data Governance Charter](#data-governance-charter) | Decision rights, named data roles, cross-domain ownership resolved |
+| [Business Rules Catalog](#business-rules-catalog) | Atomicity, stable IDs, testability, source of authority |
+| [Runbook](#runbook) | Written for 03:00 with no context: triggers, prerequisites, verification |
+| [Impact Assessment](#impact-assessment) | Mechanical graph traversal first, then judgement; enumerated blast radius |
+| [Domain Pack (the six documents together)](#domain-pack-the-six-documents-together) | Cross-document consistency checks for the six domain documents |
+
+---
+
 ## Universal — applies to every document
 
 - [ ] Front matter complete and valid (`python3 tools/validate_docs.py <path>` passes)
 - [ ] `owner` is a role, not a person
 - [ ] H1 matches front-matter `title`
+- [ ] `## Contents` table present and linking to every section, back matter included
 - [ ] Every claim about existing behaviour is either trivially checkable or carries a
       confidence tag with evidence
 - [ ] Every `🔴 Assumed` item has a named owner and a target resolution date

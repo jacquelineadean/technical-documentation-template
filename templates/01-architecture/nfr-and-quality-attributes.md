@@ -30,6 +30,28 @@ tags: [nfr]
 
 ---
 
+## Contents
+
+| Section | Summary |
+| --- | --- |
+| [1. Priorities](#1-priorities) | Ranked attributes, and what is traded away for each |
+| [2. Scenario template](#2-scenario-template) | The source–stimulus–artefact–response–measure structure used throughout |
+| [3. Performance](#3-performance) | Latency scenarios with percentile targets, current values, measurement |
+| [4. Throughput and capacity](#4-throughput-and-capacity) | Sustained and peak throughput, headroom, scaling limits |
+| [5. Availability and reliability](#5-availability-and-reliability) | Availability targets per service window, including batch cutoff attainment |
+| [6. Recoverability](#6-recoverability) | RTO and RPO per scenario, with last tested date |
+| [7. Data integrity and consistency](#7-data-integrity-and-consistency) | Duplicate delivery, partial failure, reconciliation guarantees |
+| [8. Security](#8-security) | Credential, transit, and at-rest standards |
+| [9. Maintainability and changeability](#9-maintainability-and-changeability) | Change lead time, test coverage, bus factor — measured, not assumed |
+| [10. Observability](#10-observability) | Detection latency for failures, including work that did not happen |
+| [11. Compliance and audit](#11-compliance-and-audit) | Regulatory and policy requirements, controls, and evidence |
+| [12. Usability and accessibility](#12-usability-and-accessibility) | Task completion targets and accessibility conformance level |
+| [13. Portability and operability](#13-portability-and-operability) | Portability and operability requirements with rationale |
+| [14. Compliance summary](#14-compliance-summary) | Met, partially met, not met, and not measured — by category |
+| [Change log](#change-log) | Version, date, author, change |
+
+---
+
 ## 1. Priorities
 
 > Ranked. Architecture is the practice of deciding which qualities lose when they conflict,
