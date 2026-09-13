@@ -1,0 +1,72 @@
+name: Documentation gap
+description: Something is missing, wrong, or misleading in the documentation
+title: "[Gap] "
+labels: ["documentation", "gap"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this when you went looking for an answer and could not find it, or found
+        one that turned out to be wrong. Both are equally worth reporting — a document
+        that is confidently wrong costs more than one that is missing.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of gap?
+      options:
+        - Missing — no document covers this
+        - Incomplete — the document exists but does not answer the question
+        - Wrong — the document says something that is not true
+        - Outdated — was true, no longer is
+        - Unfindable — it exists but I could not locate it
+        - Ambiguous — two documents disagree
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: What question were you trying to answer?
+      placeholder: "Which holds block the nightly dispatch extract, and which only block invoicing?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: looked
+    attributes:
+      label: Where did you look?
+      description: Helps us tell a content gap from a findability gap.
+    validations:
+      required: true
+
+  - type: textarea
+    id: found
+    attributes:
+      label: What did you find, and what was wrong with it?
+
+  - type: textarea
+    id: answer
+    attributes:
+      label: Do you know the answer now?
+      description: >
+        If you eventually worked it out, say how and what the answer is — that turns
+        this issue into most of the fix.
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - Blocking — cannot proceed without this
+        - High — caused significant delay or an incident
+        - Medium — cost me time
+        - Low — noticed in passing
+    validations:
+      required: true
+
+  - type: input
+    id: document
+    attributes:
+      label: Document (if one exists)
+      placeholder: "TAD-OPS-001 §7.3, or the path"

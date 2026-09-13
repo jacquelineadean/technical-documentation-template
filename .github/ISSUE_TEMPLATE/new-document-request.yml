@@ -1,0 +1,103 @@
+name: New document request
+description: Request a document that does not exist yet
+title: "[Doc] "
+labels: ["documentation", "new-document"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before raising this, check [`CATALOG.md`](../../CATALOG.md) — the document may
+        exist under a name you did not expect.
+
+  - type: dropdown
+    id: doc_type
+    attributes:
+      label: Document type
+      description: See guides/03-front-matter-schema.md §3 for the registry.
+      options:
+        - System profile (SYS)
+        - Capability model (CAP)
+        - Domain map (DMAP)
+        - Glossary & taxonomy (GLOS)
+        - Technical architecture document (TAD)
+        - Architecture decision record (ADR)
+        - High-level design (HLD)
+        - Low-level design (LLD)
+        - Component specification (CMP)
+        - Integration architecture (INT)
+        - Batch & scheduling architecture (BAT)
+        - NFRs & quality attributes (NFR)
+        - Security & privacy architecture (SEC)
+        - Resilience & failure mode analysis (RES)
+        - Legacy system archaeology (LGA)
+        - Data governance charter (DGC)
+        - Data dictionary (DD)
+        - Data lineage (DLN)
+        - Reference data registry (RDR)
+        - Data quality rules (DQR)
+        - Data contract (DCT)
+        - Metric & KPI catalog (MET)
+        - Interface catalog (ICAT)
+        - Interface control document (ICD)
+        - External dependency register (EDR)
+        - Domain pack (DOM/BPF/BRC/SML/DDE/DIM)
+        - Runbook (RUN)
+        - Job schedule catalog (JSC)
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: input
+    id: subject
+    attributes:
+      label: Subject
+      placeholder: "Vendor dispatch outbound interface"
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is it needed?
+      description: >
+        What decision, task, or recurring question depends on it? A document with no
+        stated reader tends not to get written, and tends not to get read if it is.
+    validations:
+      required: true
+
+  - type: textarea
+    id: questions
+    attributes:
+      label: Questions it must answer
+      description: List them. They become the review criteria.
+      placeholder: |
+        - Which fields are mandatory and what are their valid values?
+        - What happens when the partner does not acknowledge within the SLA?
+        - Who do we call at 02:00 when the file is rejected?
+    validations:
+      required: true
+
+  - type: input
+    id: owner
+    attributes:
+      label: Proposed owner (a role, not a person)
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Known sources of information
+      description: Code locations, SMEs, existing partial documents, tickets.
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Blocking a delivery
+        - High — recurring cost without it
+        - Medium
+        - Low
+    validations:
+      required: true
